@@ -258,7 +258,7 @@ ipcMain.on('restart_app', () => {
   autoUpdater.quitAndInstall();
 });
 
-/*setInterval(() => {
+setInterval(() => {
     log.info('Checking for updates')
-  autoUpdater.checkForUpdates()
-}, 60000)*/
+  autoUpdater.checkForUpdatesAndNotify()
+}, 60000)

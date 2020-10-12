@@ -1,7 +1,7 @@
 {
   "name": "k8-proxy-desktop",
   "productName": "k8-proxy-desktop",
-  "version": "0.1.7",
+  "version": "0.1.5",
   "description": "POC project to create a desktop application using Electron and Gatsby",
   "main": "./out/electron/index.js",
   "scripts": {
@@ -18,13 +18,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gmuditdce/k8-proxy-desktop.git"
+    "url": "https://github.com/gmuditdce/electron-app.git"
   },
   "private": false,
   "author": "Glasswall",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/filetrust/k8-proxy-desktop/issues"
+    "url": "https://github.com/gmuditdce/electron-app/issues"
   },
   "devDependencies": {
     "@types/react": "^16.9.49",
