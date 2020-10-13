@@ -78,9 +78,12 @@ jobs:
           cd static
           npm install
           CI= npm run build
+          rm -rf node_modules/gh-pages/.cache
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+          with:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            BRANCH: gh-pages
+            FOLDER: build
+            CLEAN: true
