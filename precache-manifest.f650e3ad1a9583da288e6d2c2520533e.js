@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "aa147793d68f9069087d57ef52282611",
+    "revision": "6791a20145327fa238e40a08b6f8b4f9",
     "url": "/electron-app/index.html"
   },
   {
-    "revision": "382999cf76fcb682e5d8",
-    "url": "/electron-app/static/css/main.f27c6d55.chunk.css"
+    "revision": "4ac04b4f026a1039d337",
+    "url": "/electron-app/static/css/main.57753b7d.chunk.css"
   },
   {
     "revision": "84482566b5daefa5cbef",
@@ -16,28 +16,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/electron-app/static/js/2.7a379eb0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "382999cf76fcb682e5d8",
-    "url": "/electron-app/static/js/main.6d51fcdd.chunk.js"
+    "revision": "4ac04b4f026a1039d337",
+    "url": "/electron-app/static/js/main.161240e2.chunk.js"
   },
   {
     "revision": "97f6dfe7eeaa50e336e0",
     "url": "/electron-app/static/js/runtime-main.6357d071.js"
   },
   {
-    "revision": "c98ae9a708855f3debba72b0caec0f21",
-    "url": "/electron-app/static/media/better-kubernetes.c98ae9a7.svg"
+    "revision": "3242726a05656dbaa535f9c564cfa3e9",
+    "url": "/electron-app/static/media/better-kubernetes.3242726a.svg"
   },
   {
     "revision": "7a0f87caa1f0e402af66dc52f537f07d",
     "url": "/electron-app/static/media/body-background.7a0f87ca.png"
   },
   {
-    "revision": "39680a8c4bf706e5a22c211affc8db5f",
-    "url": "/electron-app/static/media/built-in-prometheus-stats.39680a8c.svg"
+    "revision": "7c7b1c76a41ef3508a4481931853cb44",
+    "url": "/electron-app/static/media/built-in-prometheus-stats.7c7b1c76.svg"
   },
   {
-    "revision": "deb1a686b92aa05137e3f4e87126003f",
-    "url": "/electron-app/static/media/context-aware-terminal.deb1a686.svg"
+    "revision": "b0f068bbb61ed10e07a06e1b50a4cb23",
+    "url": "/electron-app/static/media/context-aware-terminal.b0f068bb.svg"
   },
   {
     "revision": "82f026e24b5490196a3c079f3d49d061",
@@ -52,11 +52,11 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/electron-app/static/media/logo.4d89dba8.svg"
   },
   {
-    "revision": "8f5e7e8c88bcae2a0cef17f2c37da8d9",
-    "url": "/electron-app/static/media/multi-cluster-management.8f5e7e8c.svg"
+    "revision": "6cb8bb7999b641b4198498a4ed30d9b2",
+    "url": "/electron-app/static/media/multi-cluster-management.6cb8bb79.svg"
   },
   {
-    "revision": "66588881babf25919a1ff7fa4125062e",
-    "url": "/electron-app/static/media/workspaces.66588881.svg"
+    "revision": "1e1405756d29efb30ee754ee22909bed",
+    "url": "/electron-app/static/media/workspaces.1e140575.svg"
   }
 ]);
