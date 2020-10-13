@@ -1,6 +1,9 @@
 name: build-release
 
-on: push
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   electron-app-build-release:
@@ -81,6 +84,7 @@ jobs:
           rm -rf node_modules/gh-pages/.cache
 
       - name: Deploy
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: JamesIves/github-pages-deploy-action@3.6.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
