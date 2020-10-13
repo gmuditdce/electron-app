@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/gmuditdce/electron-app/static/css/main.5b823f33.chunk.css",
+    "main.js": "/gmuditdce/electron-app/static/js/main.8161f7bd.chunk.js",
+    "main.js.map": "/gmuditdce/electron-app/static/js/main.8161f7bd.chunk.js.map",
+    "runtime-main.js": "/gmuditdce/electron-app/static/js/runtime-main.11ecc595.js",
+    "runtime-main.js.map": "/gmuditdce/electron-app/static/js/runtime-main.11ecc595.js.map",
+    "static/js/2.5865fc53.chunk.js": "/gmuditdce/electron-app/static/js/2.5865fc53.chunk.js",
+    "static/js/2.5865fc53.chunk.js.map": "/gmuditdce/electron-app/static/js/2.5865fc53.chunk.js.map",
+    "index.html": "/gmuditdce/electron-app/index.html",
+    "precache-manifest.a221ef4b70f0f35a4d1229d6b253fd31.js": "/gmuditdce/electron-app/precache-manifest.a221ef4b70f0f35a4d1229d6b253fd31.js",
+    "service-worker.js": "/gmuditdce/electron-app/service-worker.js",
+    "static/css/main.5b823f33.chunk.css.map": "/gmuditdce/electron-app/static/css/main.5b823f33.chunk.css.map",
+    "static/js/2.5865fc53.chunk.js.LICENSE.txt": "/gmuditdce/electron-app/static/js/2.5865fc53.chunk.js.LICENSE.txt",
+    "static/media/better-kubernetes.svg": "/gmuditdce/electron-app/static/media/better-kubernetes.c98ae9a7.svg",
+    "static/media/styles.css": "/gmuditdce/electron-app/static/media/header-background.82f026e2.png",
+    "static/media/built-in-prometheus-stats.svg": "/gmuditdce/electron-app/static/media/built-in-prometheus-stats.39680a8c.svg",
+    "static/media/context-aware-terminal.svg": "/gmuditdce/electron-app/static/media/context-aware-terminal.deb1a686.svg",
+    "static/media/header-lens.png": "/gmuditdce/electron-app/static/media/header-lens.78069521.png",
+    "static/media/logo.svg": "/gmuditdce/electron-app/static/media/logo.4d89dba8.svg",
+    "static/media/multi-cluster-management.svg": "/gmuditdce/electron-app/static/media/multi-cluster-management.8f5e7e8c.svg",
+    "static/media/workspaces.svg": "/gmuditdce/electron-app/static/media/workspaces.66588881.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.11ecc595.js",
+    "static/js/2.5865fc53.chunk.js",
+    "static/css/main.5b823f33.chunk.css",
+    "static/js/main.8161f7bd.chunk.js"
+  ]
+}
