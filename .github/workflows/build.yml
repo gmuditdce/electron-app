@@ -71,11 +71,16 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Install, Build, Deploy
+      - name: Install, Build
         env:
           CI: ""
         run: |
           cd static
           npm install
           CI= npm run build
-          npm run deploy
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
