@@ -45,7 +45,17 @@ jobs:
           name: "k8-proxy-desktop.snap"
           path: dist/*.snap
 
-      - name: Release electron app
+      - name: Release electron app - Windows
+        if: startsWith(matrix.os, 'Windows')
+        uses: samuelmeuli/action-electron-builder@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+
+      - name: Release electron app - Mac
+        if: startsWith(matrix.os, 'macOS')
         uses: samuelmeuli/action-electron-builder@v1
         with:
           github_token: ${{ secrets.github_token }}
