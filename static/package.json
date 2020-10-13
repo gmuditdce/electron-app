@@ -1,6 +1,6 @@
 {
   "name": "electron-app",
-  "version": "0.1.20",
+  "version": "0.1.21",
   "private": true,
   "homepage": "https://gmuditdce.github.io/electron-app",
   "devDependencies": {
