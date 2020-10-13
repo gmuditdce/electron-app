@@ -5,3 +5,4 @@ out/ui/*
 dist/*
 src/*/.DS_Store
 .DS_Store
+electron-builder.yml

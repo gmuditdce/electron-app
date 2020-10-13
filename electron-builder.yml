@@ -1,5 +1,0 @@
-appId: k8-proxy-desktop
-publish:
-  provider: github
-  token: ${{ secrets.github_token }}
-  releaseType: release
