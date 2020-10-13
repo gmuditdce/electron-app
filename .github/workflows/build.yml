@@ -72,8 +72,10 @@ jobs:
           persist-credentials: false
 
       - name: Install, Build, Deploy
+        env:
+          CI: ""
         run: |
           cd static
           npm install
-          CI=false npm run build
-          npm run deploy
+          CI= npm run build
+          npm run d eploy
