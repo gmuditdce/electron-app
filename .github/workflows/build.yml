@@ -78,4 +78,4 @@ jobs:
           cd static
           npm install
           CI= npm run build
-          npm run d eploy
+          npm run deploy
