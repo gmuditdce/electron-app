@@ -11,13 +11,10 @@ export default function Download() {
           <div className="col-lg-12">
             <div className="text-container text-center">
               <h2>
-                Download <span className="blue">K8 Proxy Desktop</span>
+                Download <span className="blue">Glasswall Desktop</span>
               </h2>
               <p className="p-large">
-              k8-proxy-desktop is a desktop based applications that provides a single entry point to all K8 projects.
-               Build with Electron , react, it is aimed at providing a single window integration with GW git resources,
-                file-drop, forensic-workbench, jupyter notebooks, and K8-* services. It is a standalone application for MacOS,
-                Windows and Linux operating systems. K8 Proxy Desktop is open source. Download it today!
+              Glasswall desktop is a desktop based applications that provide multi file drag and drop rebuild workflow. Its open source. Download it today!
               </p>
               <a
                 className = "btn-solid-lg"

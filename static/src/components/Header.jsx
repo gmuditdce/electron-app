@@ -8,18 +8,18 @@ export default function Loader() {
       <div className="header-content">
         <div className="container">
           <div className="row">
-            <div className="col-lg-7">
-              <div className="text-container">
+            <div className="col-lg-12">
+              <div className="text-container header-img">
                 <h1>
-                   K8 Proxy Desktop Application <br />
-                  FOR{" "}
+                   Glasswall Desktop Application <br />
+                  For <span id="js-static">Rebuild Files</span>
+                  {/* {" "}
                   <span id="js-rotating">
                     GIT BROWSER, FILE DROP, K8 PODS DASHBOARD, SLACK UI FOR BOTS, FORENSIC WORKBENCH
-                  </span>
+                  </span> */}
                 </h1>
                 <p className="p-large">
-                 k8-proxy-desktop is a desktop based applications that provides a single entry point to all K8 projects It's open source. Download it
-                  today!
+                Glasswall desktop application provides multi file drag and drop rebuild workflow. Its open source. Download it today!
                 </p>
                 <a
                     className = "btn-solid-lg"
@@ -40,8 +40,8 @@ export default function Loader() {
                 </a>
               </div>
             </div>
-            <div className="col-lg-5">
-              <div className="image-container">
+            <div className="col-lg-12">
+              <div className="image-container header-img">
                 <img
                   className ="img-fluid"
                   src       ={headerLens}
