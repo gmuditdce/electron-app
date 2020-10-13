@@ -75,5 +75,5 @@ jobs:
         run: |
           cd static
           npm install
-          npm run build
+          CI=false npm run build
           npm run deploy
