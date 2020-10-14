@@ -147,8 +147,8 @@ const useStyles = makeStyles((theme) => ({
         flexGrow:       1,
     },
     contentArea:{
-         minHeight:      '81vh',
-         padding:        theme.spacing(3),
+         minHeight:                 '85.7vh',
+         padding:                   theme.spacing(3),
     },
      downloadLink:{
         maxWidth:                   '245px',
@@ -583,7 +583,7 @@ function RebuildFiles(){
                     var url = window.webkitURL.createObjectURL(file);
                     let guid: string;
                     guid =  Utils.guid();
-                    Utils.sleep(100);
+                    Utils.sleep(500);
                     FileUploadUtils.makeRequest(data, url, guid, outputDirId, downloadResult);
                     setShowLoader(true);
                 })

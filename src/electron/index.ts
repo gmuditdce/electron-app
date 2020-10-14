@@ -4,20 +4,19 @@ const {
     WebContents,
     Certificate,
     Menu,
-    Tray ,
-    ipcMain
-    }                   = require('electron');
-const path              = require('path')
-const shell             = require('electron').shell
-const { dialog }        = require('electron')
-const dir               = path.resolve(__dirname, `..`)
-const { autoUpdater }   = require('electron-updater');
-const log               = require('electron-log');
+    Tray,
+    ipcMain}                = require('electron');
+const remote                = app.remote;
+const path                  = require('path')
+const shell                 = require('electron').shell
+const { dialog }            = require('electron')
+const dir                   = path.resolve(__dirname, `..`)
+const { autoUpdater }       = require('electron-updater');
+const log                   = require('electron-log');
 
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'debug';
 log.info('App starting...');
-
 
 // function makeTray(){
 //     const tray = new Tray(path.resolve(dir, `assets`, `IconTemplate.png`))
@@ -58,7 +57,7 @@ function createMenu(){
             label: 'K8-Proxy-Desktop',
             submenu: [
                 {
-                    label: 'Show Home',
+                    label: 'Home',
                     click: openMainWindow,
                 },
                 {
@@ -76,36 +75,20 @@ function createMenu(){
                         })
                     },
                 },
-                {
-                    label:'View License',
-                    click() { 
-                        shell.openExternal('https://github.com/k8-proxy/k8-proxy-desktop/blob/master/LICENSE')
-                    } 
-                },
-                {
-                    label:'Check For Update',
-                    click: async (): Promise<void> => {
-                        const { response } = await dialog.showMessageBox({
-                        message: `Check For Update`,
-                        detail: `Soon will rollout this feature`,
-                        buttons: [ `Ok`],
-                        defaultId: 1,
-                        type: `info`,
-                        })
-                    },
-                },
-                {
-                    label:'Version 0.2.0'
-                },
+                // {
+                //     label:'Check For Update',
+                //     click: async (): Promise<void> => {
+                //         const { response } = await dialog.showMessageBox({
+                //         message: `Check For Update`,
+                //         detail: `Soon will rollout this feature`,
+                //         buttons: [ `Ok`],
+                //         defaultId: 1,
+                //         type: `info`,
+                //         })
+                //     },
+                // },
                 {
                     type:'separator'
-                },
-                {
-                    label:'Report an issue',
-                    click() { 
-                        shell.openExternal('https://github.com/k8-proxy/k8-proxy-desktop/issues/new')
-                    } ,
-                    accelerator: 'CmdOrCtrl+Shift+I'
                 },
                 {
                     type:'separator'
@@ -197,11 +180,9 @@ app.commandLine.appendSwitch('allow-insecure-localhost', 'true');
 app.on('ready', () => {
   createMenu();
   openMainWindow()
-  //autoUpdater.checkForUpdatesAndNotify();
+  
 });
-app.on('ready', function()  {
-  autoUpdater.checkForUpdatesAndNotify();
-});
+
 
 app.on('certificate-error', (event: Event, contents: typeof WebContents, url: String, error: String, certificate:  typeof Certificate, callback: Function) => {
   if (url === 'https://forensic-workbench.com/') {
@@ -223,6 +204,7 @@ app.on('activate', () => {
     makeWindow()
   }
 })
+
 
 ipcMain.on('app_version', (event:any) => {
   event.sender.send('app_version', { version: app.getVersion() });
