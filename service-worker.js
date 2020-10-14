@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/electron-app/precache-manifest.a615ae5eae79489f22b6cfed897bd61a.js"
+  "/electron-app/precache-manifest.52e5f3a578edcd02bc424dd5e18bd1c1.js"
 );
 
 self.addEventListener('message', (event) => {
