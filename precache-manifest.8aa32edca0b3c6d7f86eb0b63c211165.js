@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "35928cce1fd392a490dfe912bf1127fc",
+    "revision": "868342fbd2a803322aca3fd890cc5e7d",
     "url": "/electron-app/index.html"
   },
   {
-    "revision": "a8dcd6614e0e49a65264",
+    "revision": "aca834793c6f0fff9296",
     "url": "/electron-app/static/css/main.57753b7d.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/electron-app/static/js/2.417e48bc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a8dcd6614e0e49a65264",
-    "url": "/electron-app/static/js/main.25d7d7d9.chunk.js"
+    "revision": "aca834793c6f0fff9296",
+    "url": "/electron-app/static/js/main.711a9dec.chunk.js"
   },
   {
     "revision": "97f6dfe7eeaa50e336e0",
