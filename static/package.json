@@ -1,7 +1,7 @@
 {
   "name": "electron-app",
-  "version": "1.0.9",
-  "tagVersion": "v1.0.9",
+  "version": "1.0.10",
+  "tagVersion": "v1.0.10",
   "repo": "electron-app",
   "repo_owner": "gmuditdce",
   "app_name":"k8-proxy-desktop",
