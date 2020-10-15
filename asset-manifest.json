@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/electron-app/static/css/main.57753b7d.chunk.css",
-    "main.js": "/electron-app/static/js/main.203755d3.chunk.js",
-    "main.js.map": "/electron-app/static/js/main.203755d3.chunk.js.map",
+    "main.js": "/electron-app/static/js/main.2e039bb7.chunk.js",
+    "main.js.map": "/electron-app/static/js/main.2e039bb7.chunk.js.map",
     "runtime-main.js": "/electron-app/static/js/runtime-main.6357d071.js",
     "runtime-main.js.map": "/electron-app/static/js/runtime-main.6357d071.js.map",
     "static/js/2.417e48bc.chunk.js": "/electron-app/static/js/2.417e48bc.chunk.js",
     "static/js/2.417e48bc.chunk.js.map": "/electron-app/static/js/2.417e48bc.chunk.js.map",
     "index.html": "/electron-app/index.html",
-    "precache-manifest.249844a2a43271cf557360c557bb9762.js": "/electron-app/precache-manifest.249844a2a43271cf557360c557bb9762.js",
+    "precache-manifest.0b3ed8e398fb6522f22cd1396c1d342e.js": "/electron-app/precache-manifest.0b3ed8e398fb6522f22cd1396c1d342e.js",
     "service-worker.js": "/electron-app/service-worker.js",
     "static/css/main.57753b7d.chunk.css.map": "/electron-app/static/css/main.57753b7d.chunk.css.map",
     "static/js/2.417e48bc.chunk.js.LICENSE.txt": "/electron-app/static/js/2.417e48bc.chunk.js.LICENSE.txt",
@@ -25,6 +25,6 @@
     "static/js/runtime-main.6357d071.js",
     "static/js/2.417e48bc.chunk.js",
     "static/css/main.57753b7d.chunk.css",
-    "static/js/main.203755d3.chunk.js"
+    "static/js/main.2e039bb7.chunk.js"
   ]
 }
