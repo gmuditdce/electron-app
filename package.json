@@ -1,7 +1,7 @@
 {
   "name": "k8-proxy-desktop",
   "productName": "k8-proxy-desktop",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "POC project to create a desktop application using Electron and Gatsby",
   "main": "./out/electron/index.js",
   "scripts": {
