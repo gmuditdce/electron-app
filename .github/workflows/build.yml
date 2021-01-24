@@ -30,8 +30,10 @@ jobs:
           github_token: ${{ secrets.github_token }}
 
       - name: Unit Test
-        if: startsWith(matrix.os, 'Windows')
-          run: npm run test-ut
+        run:
+          docker pull glasswallsolutions/evaluationsdk:rebuild
+          mkdir ~/.glasswall-desktop/processed
+          npm run test-ut
  
       - name: Upload artifact - Mac
         if: startsWith(matrix.os, 'macOS')
