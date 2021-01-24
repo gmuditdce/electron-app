@@ -1,5 +1,5 @@
 import * as React               from 'react';
-import {Grid }      from '@material-ui/core';
+import {Grid }                  from '@material-ui/core';
 import { makeStyles }           from '@material-ui/core/styles';
 import logo                     from '../assets/images/GWWelcomeLogo.jpg'
 import ReleaseNote              from './ReleaseNote'
@@ -14,6 +14,7 @@ const { ipcRenderer } = require('electron');
 const useStyles = makeStyles((theme) => ({
     root:       {
         display:        'flex',
+        background:     '#fff'
     },
     fullWidth:{
         maxWidth:       '100%',
@@ -102,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     },
     contentArea:{
         minHeight:       '81vh',
-        padding:         theme.spacing(3),
+        padding:         theme.spacing(0),
     },
     gridMainContainer:{
 
@@ -112,11 +113,10 @@ const useStyles = makeStyles((theme) => ({
 
 function HomePage(){
     const classes = useStyles(); 
-    const [version, setVersion] = React.useState("0.1")
+    const [version, setVersion] = React.useState("0.1.0")
     
     const getVersion = () =>{   
-        ipcRenderer.send('app_version');
-        console.log("Added version element");
+        ipcRenderer.send('app_version');        
         ipcRenderer.on('app_version', (event:any, arg:any) => {
             setVersion(arg.version);
         });
@@ -127,7 +127,13 @@ function HomePage(){
       }, []);
 
 
+      const getStarted =()=>{
+        console.log("localStorage" + localStorage.getItem(Utils.WELCOME_PAGE_VISTIED_KEY));
+        localStorage.setItem(Utils.WELCOME_PAGE_VISTIED_KEY, Utils.WELCOME_PAGE_VISTIED_VAL);
+    }
+
     return(
+        <>
         <div className={classes.root}> 
                 <SideDrawer showBack={false}/>
                 <main className={classes.content}>
@@ -135,14 +141,14 @@ function HomePage(){
                     <div className={classes.contentArea}>
                         <Grid className={classes.gridMainContainer}>
                             <Grid className={classes.gridItemLeft}>
-                                <h2 className={classes.welcomeTxt}>Welcome to Glasswall Proxy Desktopsssssss</h2>
+                                <h2 className={classes.welcomeTxt}>Welcome to Glasswall Desktop</h2>
                                 <div className={classes.logo}>
                                     <img src={logo} className={classes.logoImg}></img>
-                                    <h2 className={classes.heading}>Glasswall Proxy Desktop</h2>
+                                    <h2 className={classes.heading}>Glasswall Desktop</h2>
                                     <h6 className={classes.version}>{version}</h6>
-                                    <p className={classes.abtContent}>Glasswall proxy desktop is a desktop based applications that provide multi file drag and drop rebuild workflow.</p>
+                                    <p className={classes.abtContent}>Glasswall Desktop is a desktop application that provides multi file drag and drop rebuild workflow.</p>
                                 </div>
-                                <div className={classes.btnGroup}>
+                                <div onClick={getStarted} className={classes.btnGroup}>
                                     <Link to="/rebuildFiles" className={classes.getStartBtn}>Get Started</Link>                        
                                 </div>
                                 <footer>
@@ -154,10 +160,11 @@ function HomePage(){
                             </Grid>  
                         </Grid>
                     </div>
-                    <Footer/>
+                   
                 </main>
             </div>   
-        
+            <Footer/>
+            </>
     )
 }
 

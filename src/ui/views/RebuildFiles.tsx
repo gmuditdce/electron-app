@@ -1,16 +1,17 @@
 import  React, {useState}       from 'react';
 import { makeStyles }           from '@material-ui/core/styles';
-
 import Table                    from '@material-ui/core/Table';
 import TableBody                from '@material-ui/core/TableBody';
 import TableCell                from '@material-ui/core/TableCell';
-import TableContainer           from '@material-ui/core/TableContainer';
 import TableHead                from '@material-ui/core/TableHead';
 import TableRow                 from '@material-ui/core/TableRow';
 import DeleteIcon               from '@material-ui/icons/Delete';
 import FolderIcon               from '@material-ui/icons/Folder';
 import { CardActions,
-        TablePagination 
+        TablePagination,
+        Switch,
+        FormControlLabel,
+        Tooltip,         
     }                           from '@material-ui/core';
 import Footer                   from '../components/Footer';
 import Dropzone                 from "react-dropzone";
@@ -21,17 +22,17 @@ import * as FileUploadUtils     from '../components/FileUploadUtils'
 import Loader                   from '../components/Loader';
 import * as Utils               from '../utils/utils'
 import RawXml                   from '../components/RawXml';
-const { dialog }                = require('electron').remote
+import preceiveThreats          from '../components/ThreatIntelligence'
+import ThreatAnalysisDialog     from '../components/ThreatAnalysisDialog'
 
-var child_process               = require("child_process");
-const path                      = require('path');
+const { dialog }                = require('electron').remote
 var fs                          = require('fs');
-const commonPath                = require('common-path');
 
 
 const useStyles = makeStyles((theme) => ({
     root:       {   
         display:                    'flex', 
+        background:                 '#fff'
     },    
     table: {
         minWidth:                   650,
@@ -67,6 +68,9 @@ const useStyles = makeStyles((theme) => ({
         marginBottom:               '20px',
         fontSize:                   '20px',
         alignItems:                 'center',    
+        width:                      '70%',
+        margin:                     '20px auto',
+        background:                 '#f3f8fe',
         '& p':{
             textAlign:              'center',    
             fontSize:               '25px',
@@ -118,9 +122,9 @@ const useStyles = makeStyles((theme) => ({
         padding:                    '10px',
         minWidth:                   '154px',
         borderRadius:               '4px',
-        border:                     '2px solid #6ab8f0',
-        color:                      '#6ab8f0',
-        background:                 '#fff'
+        color:                      '#fff',
+        background:                 '#469ffd',
+        border:                     'none'
    },
    errMsg:{
         color:                      'red',
@@ -149,6 +153,9 @@ const useStyles = makeStyles((theme) => ({
     contentArea:{
          minHeight:                 '85.7vh',
          padding:                   theme.spacing(3),
+         '& h3': {
+             marginTop:             '0',
+         }
     },
      downloadLink:{
         maxWidth:                   '245px',
@@ -164,7 +171,7 @@ const useStyles = makeStyles((theme) => ({
         padding:                    '7px 10px',
         fontSize:                   '12px',
         fontWeight:                 'normal',
-        backgroundColor:            '#0c3451',
+        backgroundColor:            '#144e78 ',
         borderRadius:               '3px',
      },
      deleteBtn:{
@@ -196,9 +203,8 @@ const useStyles = makeStyles((theme) => ({
         fontSize:                  '13px',
         lineHeight:                '25px',
         background:                '#ddd',
-        position:                  'absolute',
         left:                      '5px',
-        marginTop:                 '10px',
+        marginTop:                 '20px',
     },
      outFolderBtn:{
         background:                 '#3cb371',
@@ -216,7 +222,7 @@ const useStyles = makeStyles((theme) => ({
             transition:             '0.5s'
         },
         '&:focus':{ 
-            outline:             '0'
+            outline:                '0'
         }
      },
      outFolderBtnDissabled:{
@@ -264,7 +270,6 @@ const useStyles = makeStyles((theme) => ({
         fontSize:                   '15px'
     },
     settings:{
-        borderBottom:               '1px solid #ccc',
         paddingBottom:              '20px',
         float:                      'left',
         width:                      '100%',
@@ -277,6 +282,18 @@ const useStyles = makeStyles((theme) => ({
     btnHeading:{
         float:                      'left',
         width:                      '100%',
+        '& h4':{
+            position:               'relative',
+            float:                  'left',      
+            '& span':{
+                color:                  'red',
+                margin:                 '14px 5px 0 0px',
+            },
+        },
+    },
+    headingGroup:{
+        float:                      'left',
+        width:                      '100%'
     },
     fileType:{
         float:                      'left',
@@ -284,7 +301,7 @@ const useStyles = makeStyles((theme) => ({
     },
     saveFileBtn:{
         '& button':{
-            background:              '#084d94',
+            background:              '#144e78',
             border:                  'none',
             color:                   '#fff',
             borderRadius:            '3px',
@@ -348,7 +365,87 @@ const useStyles = makeStyles((theme) => ({
         padding:                    '10px 20px',
         borderRadius:               '3px',
         cursor:                     'pointer'
-    }
+    },
+    toggleContainer:{
+        float:                      'right',
+        position:                   'relative',
+        marginTop:                  '5px',  
+        '& span':{
+            fontWeight:             'bold',
+            
+        },
+        '&:hover':{
+            '& div':{
+                display:            'block'
+            }
+        }
+    },
+    fab: {
+        margin:                     theme.spacing(2),
+    },
+    absolute: {
+        position:                   'absolute',
+        bottom:                     theme.spacing(2),
+        right:                      theme.spacing(3),
+    },
+    infoIcon:{
+        margin:                     '13px 5px 0 0px',
+        float:                      'left',
+        color:                      'gray'
+    },
+    toggleToolTip:{
+        position:                   'relative'
+    },
+    toggleToolTipTitle:{
+        display:                    'none',
+        position:                   'absolute',
+        background:                 '#0c3451',
+        color:                      '#fff',
+        margin:                     '10px',
+        padding:                    '10px',
+        fontSize:                   '12px',
+        borderRadius:               '5px',      
+        right:                      '30px',
+        maxWidth:                   '300px',
+        fontWeight:                 'normal',
+        width:                      '300',
+        '&::before':{
+            content:                '" "',
+            height:                 '10px',
+            width:                  '10px',
+            position:               'absolute',
+            background:             '#0c3451',            
+            right:                   '14px',
+            top:                    '-6px',
+            transform:              'rotate(45deg)',
+        }
+    },
+    infobBtn:{},
+    tableContainer:{
+        background:                 '#f9f9f9',
+        borderRadius:               '20px',
+        padding:                    '20px',
+        boxShadow:                  '0px 0px 5px #ccc',
+        width:                      '100%',
+        marginBottom:               '20px',
+        float:                      'left'
+    },
+    high:{
+        color:                  'red',
+        fontWeight:             'bold'
+     },
+     medium:{
+        color:                  'orange',
+        fontWeight:             'bold'
+     },
+     low:{
+        color:                  'blue',
+        fontWeight:             'bold'
+     },
+     ok_unknown:{
+        color:                  '#098c44',
+        fontWeight:             'bold'
+     },
  }));
 
 
@@ -370,7 +467,12 @@ function RebuildFiles(){
     const [userTargetDir, setUserTargetDir]         = useState("");  
     const [masterMetaFile, setMasterMetaFile]       = useState<Array<Metadata>>([]);
     const [outputDirType, setOutputDirType]         = useState(Utils.OUTPUT_DIR_FLAT)
-    const [showAlertBox, setshowAlertBox]           = useState(false);  
+    const [showAlertBox, setshowAlertBox]           = useState(false);
+    const [flat, setFlat]                           = React.useState(false);
+    const [files, setFiles]                         = useState<Array<RebuildResult>>([]);
+    const [allPath, setAllPath]                     =  React.useState<Array<string>>([]);
+    const [openThreatDialog, setOpenThreatDialog]   = React.useState(false);   
+    const [threatAnalysis, setThreatAnalysis]       = useState(null); 
 
     interface RebuildResult {
         id              : string,
@@ -382,6 +484,9 @@ function RebuildFiles(){
         xmlResult       : string;
         path?           : string;
         cleanFile?      : any;
+        threat?         : boolean;
+        threat_level?   : string;
+        threat_analysis?: any;
       }
 
     
@@ -389,16 +494,23 @@ function RebuildFiles(){
         original_file       : string,
         clean_file?         : string;
         report?             : string;
+        policy_file?        : string;
         status?             : string;
         message?            : string;
-        time?               : string;
+        time?               : number;
         userTargetFolder?   : string;
+        rebuildSource       : string;
+        isThreat            : boolean;
+        threatLevel         : string;
     }
 
+    React.useEffect(()=>{
+        setUserTargetDir(Utils.getCloudDefaultOutputFOlder()||"");
+    },[]);
    
     React.useEffect(() => {
         if(folderId!=''){
-            var rootFolder = Utils._PROCESSED_FOLDER +folderId
+            var rootFolder = Utils.getProcessedPath() + Utils.getPathSep() +folderId
             if (!fs.existsSync(rootFolder)){
                 fs.promises.mkdir(rootFolder, { recursive: true });
             }
@@ -411,20 +523,23 @@ function RebuildFiles(){
     React.useEffect(() => {
         if (counter == 0 && loader == true) {
             setShowLoader(false);
-            saveTextFile(JSON.stringify(masterMetaFile),  targetDir +"/", 'metadata.json');
+            Utils.saveTextFile(JSON.stringify(masterMetaFile),  targetDir, 'metadata.json');
 
-            if(userTargetDir !="" && outputDirType === Utils.OUTPUT_DIR_HIERARCY){
-                let PATHS: string[];
-                PATHS=[]
-                rebuildFileNames.map(rebuild=>{
-                    if(rebuild.path)
-                        PATHS.push(rebuild.path);
-                });
-                const common = commonPath(PATHS);
-                common.parsedPaths.map((cPath:any)=>{
-                    saveBase64File( getRebuildFileContent(cPath.original), userTargetDir + "/" + cPath.subdir + "/", cPath.basePart );
-            });
-        }
+            //if(userTargetDir !="" && outputDirType === Utils.OUTPUT_DIR_HIERARCY){
+            // if(userTargetDir !="" && !flat){
+            //     let PATHS: string[];
+            //     PATHS=[]
+
+            //     rebuildFileNames.map(rebuild=>{
+            //         if(rebuild.path)
+            //             PATHS.push(rebuild.path);
+            //     });
+
+            //     const common = commonPath(PATHS);
+            //     common.parsedPaths.map((cPath:any)=>{
+            //         Utils.saveBase64File( getRebuildFileContent(cPath.original), userTargetDir + Utils.getPathSep() + cPath.subdir, cPath.basePart );
+            //      });
+            //  }
         }
       }, [counter]);
 
@@ -435,159 +550,173 @@ function RebuildFiles(){
         rebuildFile = rebuildFileNames.find((rebuildFile) => rebuildFile.id ==id);
         if(rebuildFile){
             setXml(rebuildFile.xmlResult);
+            setThreatAnalysis(rebuildFile.threat_analysis)
           }
          }, [id, xml, open]);
 
+    React.useEffect(() => {
+        let rebuildFileReverse = rebuildFileNames.slice().reverse()
+        let rebuildResultsPerPage = rebuildFileReverse && rebuildFileReverse.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage);
+        setFiles(rebuildResultsPerPage)
+        }, [rowsPerPage, page, rebuildFileNames]);
 
 
-    //callback for rebuild and analysis
-    const downloadResult =(result: any)=>{
-    
-        setRebuildFileNames(rebuildFileNames =>[...rebuildFileNames,  {
-                id:result.id,
-                url: result.url,
-                name: result.filename,
-                sourceFileUrl: result.source,
-                isError: result.isError,
-                msg: result.msg,
-                xmlResult:result.xmlResult,
-                path: result.path,
-                cleanFile: result.cleanFile
-                }]);
 
-        setCounter(state=>state-1);
-        let fileHash: string;
-        fileHash = Utils.getFileHash(result.original)
-          
-        if(!result.isError){
-            var cleanFilePath = Utils._PROCESSED_FOLDER + result.targetDir + "/" + fileHash +  "/" + Utils._CLEAN_FOLDER;
-            saveBase64File(result.cleanFile, cleanFilePath, result.filename );
+//callback for rebuild and analysis
+const downloadResult = async(result: any)=>{
+    let isThreat = false
+    let threatLevel = "Unknown" 
+    let threat: any;    
+    let fileHash: string;
+    fileHash = Utils.getFileHash(result.original)
+      
+    if(!result.isError){
 
-            var OriginalFilePath = Utils._PROCESSED_FOLDER + result.targetDir + "/" + fileHash +  "/" + Utils._ORIGINAL_FOLDER;
-            saveBase64File(result.original, OriginalFilePath, result.filename);
-
-            var reportFilePath = Utils._PROCESSED_FOLDER + result.targetDir + "/" + fileHash +  "/" + Utils._REPORT_FOLDER;
-            saveTextFile(result.xmlResult,reportFilePath, Utils.stipFileExt(result.filename)+'.xml');
-
-            var metadataFilePath = Utils._PROCESSED_FOLDER + result.targetDir + "/" + fileHash +  "/";
-            let content: Metadata;
-            content ={
-                original_file       : Utils._ORIGINAL_FOLDER + result.filename,
-                clean_file          : Utils._CLEAN_FOLDER + result.filename,
-                report              : Utils._REPORT_FOLDER + Utils.stipFileExt(result.filename)+'.xml',
-                status              : "Success",
-                time                : new Date().toLocaleDateString(),
-                userTargetFolder    : userTargetDir,
-            }
-            saveTextFile(JSON.stringify(content), metadataFilePath, 'metadata.json');
-        
-            content.original_file = fileHash + "/" + Utils._ORIGINAL_FOLDER + result.filename
-            content.clean_file = fileHash + "/" + Utils._CLEAN_FOLDER + result.filename
-            content.report = fileHash + "/" + Utils._REPORT_FOLDER + Utils.stipFileExt(result.filename)+'.xml'
-            content.userTargetFolder = userTargetDir;
-            
-            masterMetaFile.push(content);
-            if(userTargetDir !=""){
-                var filepath = userTargetDir+"/";
-                if(outputDirType === Utils.OUTPUT_DIR_FLAT){
-                    saveBase64File(result.cleanFile, filepath, result.filename );
-                }
-            }
- 
+        if(flat){
+            Utils.saveBase64File(result.cleanFile, userTargetDir, result.filename );
         }else{
-            var OriginalFilePath = Utils._PROCESSED_FOLDER + result.targetDir + "/" + fileHash +  "/" + 
-                Utils._ORIGINAL_FOLDER;
-            console.log("Error case:" +OriginalFilePath + ", result.targetDir:" + result.targetDir)
-            saveBase64File(result.original, OriginalFilePath, result.filename);
-            let content: Metadata;
-            content ={
-                original_file       : fileHash + "/" + Utils._ORIGINAL_FOLDER + result.filename,
-                clean_file          : '',
-                report              : '',
-                status              : "Failure",
-                time                : new Date().toLocaleDateString(),
-                userTargetFolder    : userTargetDir,
-                message             : result.msg
-            }
-            masterMetaFile.push(content);
+            let filePath: string;
+            filePath = Utils.getHieracyPath(result.path, userTargetDir, allPath);
+            Utils.saveBase64File(result.cleanFile, filePath , result.filename );
         }
+
+        var cleanFilePath = Utils.getProcessedPath() + Utils.getPathSep()
+                             + result.targetDir + Utils.getPathSep() + fileHash
+                              + Utils.getPathSep() + Utils._CLEAN_FOLDER;
+        Utils.saveBase64File(result.cleanFile, cleanFilePath, result.filename );
+
+        var OriginalFilePath = Utils.getProcessedPath()  +  Utils.getPathSep()
+                                + result.targetDir +  Utils.getPathSep()
+                                 + fileHash +  Utils.getPathSep() + Utils._ORIGINAL_FOLDER;
+        Utils.saveBase64File(result.original, OriginalFilePath, result.filename);  
+
+        var reportFilePath =  Utils.getProcessedPath() +  Utils.getPathSep()
+                             + result.targetDir +  Utils.getPathSep()
+                              + fileHash +   Utils.getPathSep() + Utils._REPORT_FOLDER;
+        Utils.saveTextFile(result.xmlResult, reportFilePath, Utils.stipFileExt(result.filename)+'.xml');
+
+        var metadataFilePath =  Utils.getProcessedPath() + Utils.getPathSep()  + 
+                                result.targetDir + Utils.getPathSep() + fileHash;
+
+        let content: Metadata;
+        content ={
+            original_file       : Utils._ORIGINAL_FOLDER + Utils.getPathSep() + result.filename,
+            clean_file          : Utils._CLEAN_FOLDER + Utils.getPathSep()+ result.filename,
+            report              : Utils._REPORT_FOLDER + Utils.getPathSep() + Utils.stipFileExt(result.filename)+'.xml',
+            policy_file         : "config.xml",
+            status              : "Success",
+            time                : new Date().getTime(),
+            userTargetFolder    : userTargetDir,
+            rebuildSource       : Utils.REBUILD_TYPE_CLOUD,
+            isThreat            : isThreat,
+            threatLevel         : threatLevel
+        }
+        let metaContentCopy = content
+        Utils.saveAppliedPolicy(metadataFilePath);
+        Utils.saveTextFile(JSON.stringify(content), metadataFilePath, 'metadata.json');
+    
+        content.original_file = fileHash + Utils.getPathSep() + Utils._ORIGINAL_FOLDER + Utils.getPathSep() + result.filename
+        content.clean_file = fileHash +Utils.getPathSep() + Utils._CLEAN_FOLDER + Utils.getPathSep() + result.filename
+        content.report = fileHash + Utils.getPathSep() + Utils._REPORT_FOLDER + Utils.getPathSep() + Utils.stipFileExt(result.filename)+'.xml'
+        content.userTargetFolder = userTargetDir;
+        content.policy_file = fileHash +Utils.getPathSep() + "config.xml";
         
-    }
-
-    //save base64 file 
-    const saveBase64File = async(content: string, filePath: string, filename: string)=>{
-        !fs.existsSync(filePath) && fs.mkdirSync(filePath, { recursive: true })
-        fs.writeFile(filePath + filename, content, {encoding: 'base64'}, function(err: any) { if (err) {
-                console.log('err', err);
+        masterMetaFile.push(content);
+        // TI Reporting         
+        let basePath = Utils.getProcessedPath() + Utils.getPathSep() + result.targetDir + Utils.getPathSep() + fileHash + Utils.getPathSep()
+        let xml = result.xmlResult   
+        let reportPath = Utils.stipFileExt(result.filename)+'.xml'
+        threat = await preceiveThreats(xml,reportFilePath, reportPath, cleanFilePath, result.filename,basePath)
+        console.log('threat level '+threat.threat_level)
+        console.log('threats '+JSON.stringify(threat.threats))
+        console.log('threats analysis '+JSON.stringify(threat.threat_analysis))
+        if(threat){                
+            threatLevel = threat.threat_level.toUpperCase() 
+            if(threatLevel != "OK" && threatLevel != "UNKNOWN"){
+                isThreat = true
             }
-        });
-    }
-   
-    //save any text file 
-    const saveTextFile = async (xmlContent: string, filePath: string, filename: string) =>{
-        !fs.existsSync(filePath) && fs.mkdirSync(filePath, { recursive: true })
-        fs.writeFile(filePath+ filename, xmlContent, function(err: any) {if (err) {
-                    console.log('err', err);
-            }
-        });
-    }
-
-    const getRebuildFileContent =(filePath: string)=>{
-        var rebuild = rebuildFileNames.find(rebuild=>rebuild.path === filePath);
-        if(rebuild)
-            return rebuild.cleanFile;
-        else    
-            return null;
-    }
-
-     const open_file_exp=(fpath: string)=> {
-        var command = '';
-        switch (process.platform) {
-          case 'darwin':
-            command = 'open -R ' + fpath;
-            break;
-          case 'win32':
-            if (process.env.SystemRoot) {
-              command = path.join(process.env.SystemRoot, 'explorer.exe');
-            } else {
-              command = 'explorer.exe';
-            }
-            fpath = fpath.replace(/\//g, '\\');
-            command += ' /select, ' + fpath;
-            break;
-          default:
-            fpath = path.dirname(fpath)
-            command = 'xdg-open ' + fpath;
+            threat.filename= result.filename;
+            threat.fileSize = result.original.length;
         }
-        child_process.exec(command, function(stdout:any) {
-        });
+        metaContentCopy.isThreat    = isThreat
+        metaContentCopy.threatLevel = threatLevel
+        Utils.saveTextFile(JSON.stringify(metaContentCopy), metadataFilePath, 'metadata.json');
+
+    }else{
+        var OriginalFilePath =Utils.getProcessedPath() +  Utils.getPathSep()
+                            + result.targetDir + Utils.getPathSep() + fileHash +  Utils.getPathSep() + 
+                                Utils._ORIGINAL_FOLDER;
+        Utils.addRawLogLine(1,result.filename,"Error case:" +OriginalFilePath + ", result.targetDir:" + result.targetDir)
+        Utils.saveBase64File(result.original, OriginalFilePath, result.filename);
+        let content: Metadata;
+        content ={
+            original_file       : fileHash + Utils.getPathSep() + Utils._ORIGINAL_FOLDER + Utils.getPathSep() + result.filename,
+            clean_file          : '',
+            report              : '',
+            status              : "Failure",
+            time                : new Date().getTime(),
+            userTargetFolder    : userTargetDir,
+            message             : result.msg,
+            rebuildSource       : Utils.REBUILD_TYPE_CLOUD,
+            isThreat            : isThreat,
+            threatLevel         : threatLevel
+        }
+        masterMetaFile.push(content);
+    }   
+    
+    setRebuildFileNames(rebuildFileNames =>[...rebuildFileNames,  {
+        id:result.id,
+        url: result.url,
+        name: result.filename,
+        sourceFileUrl: result.source,
+        isError: result.isError,
+        msg: result.msg,
+        xmlResult:result.xmlResult,
+        path: result.path,
+        cleanFile: result.cleanFile,
+        threat: isThreat,
+        threat_level: threatLevel,
+        threat_analysis: threat
+        }]);
+
+    setCounter(state=>state-1);
+    
     }
 
+    
+    const processFiles =(files: any)=>{
+        
+        let outputDirId: string;
+        setCounter((state: any)=>state + files.length)
+        setRebuildFileNames([]);
+        setPage(0);
+        masterMetaFile.length =0;
+        outputDirId = Utils.guid()
+        setFolderId(outputDirId);
+        setAllPath([]); 
+
+        //console.log(acceptedFiles[0].path)
+        files.map(async (file: any) => {
+            allPath.push(file.path);
+            await FileUploadUtils.getFile(file).then(async (data: any) => {
+                setFileNames((fileNames: any) =>[...fileNames, file.name]);
+                var url = window.webkitURL.createObjectURL(file);
+                let guid: string;
+                guid =  Utils.guid();
+                setShowLoader(true);
+                Utils.sleep(600);
+                await FileUploadUtils.makeRequest(data, url, guid, outputDirId, downloadResult);
+            })
+        })
+    }
     //Multi file drop callback 
     const handleDrop = async (acceptedFiles:any) =>{
-        let outputDirId: string;
+       
         if(userTargetDir ==""){
             setshowAlertBox(true);
         }
         else {
-            setCounter((state: any)=>state + acceptedFiles.length)
-            setRebuildFileNames([]);
-            masterMetaFile.length =0;
-            outputDirId = Utils.guid()
-            setFolderId(outputDirId);
-
-            //console.log(acceptedFiles[0].path)
-            acceptedFiles.map(async (file: File) => {
-                await FileUploadUtils.getFile(file).then(async (data: any) => {
-                    setFileNames((fileNames: any) =>[...fileNames, file.name]);
-                    var url = window.webkitURL.createObjectURL(file);
-                    let guid: string;
-                    guid =  Utils.guid();
-                    setShowLoader(true);
-                    Utils.sleep(800);
-                    await FileUploadUtils.makeRequest(data, url, guid, outputDirId, downloadResult);
-                })
-            })
+            setTimeout(processFiles, 100, acceptedFiles);
         }
     }  
 
@@ -614,9 +743,9 @@ function RebuildFiles(){
         setMasterMetaFile([]);
     }
 
-    const handleChange= (e:any) =>{
-        setOutputDirType(e.currentTarget.value)
-    }
+    // const handleChange= (e:any) =>{
+    //     setOutputDirType(e.currentTarget.value)
+    // }
 
     const closeAlertBox = () => {
         setshowAlertBox(false);
@@ -624,7 +753,12 @@ function RebuildFiles(){
 
     const successCallback =(result: any)=>{
      
-        setUserTargetDir(result.filePaths[0])
+        if(result.filePaths != undefined && result.filePaths.length>0){
+            console.log(result.filePaths[0])
+            setUserTargetDir(result.filePaths[0])
+            localStorage.setItem(Utils.CLOUD_OUPUT_DIR_KEY, result.filePaths[0]);
+        } 
+       
     }
     const failureCallback =(error: any)=>{
         alert(`An error ocurred selecting the directory :${error.message}`) 
@@ -641,17 +775,65 @@ function RebuildFiles(){
         promise.then(successCallback, failureCallback);
     }
 
-   
+    const changeDownloadmode = (event:any) => {
+        setFlat((prev) => !prev);
+    } 
+
+    const handleThreadDialogOpen =(open:boolean)=>{
+        setOpenThreatDialog(open);
+    }
+
+    const viewThreadAnalysis=(id: string)=>{
+        setId(id);
+        setOpenThreatDialog(!openThreatDialog);
+    }
+
+    const getFormattedThreatValue =(threat: boolean| undefined, threatValue: string| undefined)=>{
+        console.log("threat" +threat)
+        console.log("threatValue" +threatValue)
+        var uiDOM=null;
+        if(threat){
+            switch(threatValue){
+                case "HIGH":{
+                    uiDOM =  <span className ={classes.high} >{threatValue}</span>;
+                }break;
+                case "MEDIUM":{
+                    uiDOM =  <span className ={classes.medium}>{threatValue}</span>;
+                }break;
+                case "LOW":{
+                    uiDOM =  <span className ={classes.low}>{threatValue}</span>;
+                }break;
+            }
+        }else{
+            uiDOM =  <span className ={classes.ok_unknown}>{threatValue}</span>;
+        }
+        
+        return uiDOM
+    }
 
     return(
         <div>   
-            {open && <RawXml content={xml} isOpen={open} handleOpen={openXml}/>   }                
+            {open && <RawXml content={xml} isOpen={open} handleOpen={openXml}/>   }   
+            {openThreatDialog && <ThreatAnalysisDialog threat ={threatAnalysis} isOpen={openThreatDialog} handleOpen={handleThreadDialogOpen}/>   }             
             <div className={classes.root}> 
                 <SideDrawer showBack={false}/>
                 <main className={classes.content}>
                     <div className={classes.toolbar} />  
-                    <div className={classes.contentArea}>             
-                    <h3>Rebuild Files</h3>
+                    <div className={classes.contentArea}>  
+                    {loader  && <Loader/> }             
+                    <h3>Cloud Rebuild Files                   
+                    {/* <div className={classes.toggleContainer}>
+                    <FormControlLabel className={classes.toggleToolTip}
+                        //title={flat ? "Flat" : "Hierarchy"}
+                        value={flat ? "Flat" : "Hierarchy"}
+                        control={<Switch color="primary" checked={flat} onChange={changeDownloadmode}/>} 
+                        label={flat ? "Flat" : "Hierarchy"} />
+                        <div className={classes.toggleToolTipTitle}>
+                        The hierarchical filesystems option to save processed files in a tree structure of directories,
+flat filesystem option to saves in a single directory that contains all files with no subdirectories
+                        </div>
+                    </div> */}
+                    </h3>
                         <Dropzone onDrop={handleDrop} >
                             {({ getRootProps, getInputProps }) => (
                             <div {...getRootProps()} className={classes.dropzone}>
@@ -666,97 +848,101 @@ function RebuildFiles(){
                     </Dropzone>
                     <div className={classes.errMsg}> Failed to upload </div>
                     <div className={classes.successMsg}>File uploaded successuly </div>
-                    <div>
-                    {showAlertBox && 
+                    <div className={classes.tableContainer}>
+                        <div>
+                            {showAlertBox && 
                                 <div className={classes.alertContainer}>
                                     <div className={classes.alertModel}>              
                                         <h3>Please Select Target Directory</h3>               
                                         <button className={classes.submitBtn} onClick={closeAlertBox}>ok</button>
                                     </div>
                                 </div>   
-                    }                       
-                        {loader  && <Loader/> }   
-                        
-                            <div className={classes.tableField}>
-                                <div className={classes.settings}>  
-                                    {/* <h2>Settings</h2> */}
-                                    <div className={classes.btnHeading}>                                                                           
-                                        <h4>Select Directory Path</h4>
-                                        <div className={classes.saveFileBtn}>
-                                            <input 
-                                                readOnly        = {true} 
-                                                type            = "text"
-                                                placeholder     = "Directory Path"
-                                                defaultValue    = {userTargetDir}
-                                            />
-                                            <button onClick={selectUserTargetDir}>
-                                                <FolderIcon className={classes.btnIcon}/> 
-                                                Select Target Directory
-                                             </button>
-                                        </div>
+                            }                       
+                            
+                                <div className={classes.tableField}>
+                                    <div className={classes.settings}>  
+                                        <div className={classes.btnHeading}>                                                                           
+                                            <div className={classes.headingGroup}>                                                                         
+                                                <h4>Select Directory Path 
+                                                    <span>*</span> 
+                                                </h4>
+                                                <div className={classes.toggleContainer}>
+                                                    <FormControlLabel className={classes.toggleToolTip}
+                                                        //title={flat ? "Flat" : "Hierarchy"}
+                                                        value={flat ? "Flat" : "Hierarchy"}
+                                                        control={<Switch color="primary" checked={flat} onChange={changeDownloadmode}/>} 
+                                                        label={flat ? "Flat" : "Hierarchy"} />
+                                                        <div className={classes.toggleToolTipTitle}>
+                                                        The hierarchical filesystems option to save processed files in a tree structure of directories,
+                                flat filesystem option to saves in a single directory that contains all files with no subdirectories
+                                                        </div>
+                                                    </div>
+                                                    
+                                            </div>  
+                                            <div className={classes.saveFileBtn}>
+                                                <input 
+                                                    readOnly        = {true} 
+                                                    type            = "text"
+                                                    placeholder     = "Directory Path"
+                                                    defaultValue    = {userTargetDir}
+                                                />
+                                                <button onClick={selectUserTargetDir}>
+                                                    <FolderIcon className={classes.btnIcon}/> 
+                                                    Select Target Directory
+                                                </button>
+                                            </div>
+                                        </div>                                   
                                     </div>
-                                    <div className={classes.fileType}>
-                                        <h4>Output Type</h4>
-                                        <div className={classes.fileOption}>
-                                            <input  type        = "radio" 
-                                                    checked     = {outputDirType == Utils.OUTPUT_DIR_FLAT} 
-                                                    onChange    = {handleChange}
-                                                    value       = {Utils.OUTPUT_DIR_FLAT} 
-                                                    name        = "fileoption"/>
-                                            <span>Flat</span>
-                                        </div>
-                                        <div className={classes.fileOption}>
-                                            <input  type        = "radio" 
-                                                    value       = {Utils.OUTPUT_DIR_HIERARCY}
-                                                    onChange    = {handleChange}
-                                                    checked     = {outputDirType == Utils.OUTPUT_DIR_HIERARCY} 
-                                                    name        = "fileoption"/>
-                                            <span>Hierarchy</span>
-                                        </div>
+                                    {rebuildFileNames.length>0 && 
+                                    <div> 
+                                        <h3>Cloud Rebuild Files
+                                            <button onClick={()=>Utils.open_file_exp(targetDir)} className={rebuildFileNames.length>0? classes.outFolderBtn:classes.outFolderBtnDissabled}><FolderIcon className={classes.btnIcon}/> Browse Output Folder</button>
+                                        </h3>
+                                        <Table className={classes.table} size="small" aria-label="a dense table">
+                                            <TableHead>
+                                            <TableRow>
+                                                <TableCell className={classes.texttBold}>Status</TableCell>
+                                                <TableCell align="left" className={classes.texttBold}>Original</TableCell>
+                                                <TableCell align="left" className={classes.texttBold}>Rebuilt</TableCell>
+                                                <TableCell align="left" className={classes.texttBold}>Threat Level</TableCell>
+                                                <TableCell align="left" className={classes.texttBold}>XML</TableCell>
+                                                <TableCell align="left" className={classes.texttBold}>Analysis</TableCell>
+                                            </TableRow>
+                                            </TableHead>
+                                            <TableBody>
+                                            {files.map((row) => (
+                                                <TableRow key={row.id}>
+                                                <TableCell align="left" className={classes.status}>{row.isError == true? <span>Failed</span>:<p>Success</p>}</TableCell>
+                                                <TableCell align="left"><a id="download_link" href={row.sourceFileUrl} download={row.name} className={classes.downloadLink} title={row.name}><FileCopyIcon className={classes.fileIcon}/> {row.name}</a></TableCell>
+                                                {
+                                                    !row.isError ?
+                                                        <TableCell align="left"><a id="download_link" href={row.url} download={row.name} className={classes.downloadLink} title={row.name}><FileCopyIcon className={classes.fileIcon}/>{row.name}</a></TableCell>
+                                                        : <TableCell align="left">{row.msg}</TableCell>
+                                                }
+                                                 <TableCell align="left" >{getFormattedThreatValue(row.threat, row.threat_level)}</TableCell>
+                                                {
+                                                    !row.isError || row.xmlResult != "undefined" ?
+                                                    <TableCell align="left"><button  onClick={() => viewXML(row.id)} className={classes.viewBtn}>{!row.isError||row.xmlResult != "undefined"?'View Report':''}</button></TableCell>
+                                                        : <TableCell align="left"></TableCell>
+                                                }
+                                                  {
+                                                !row.isError ?
+                                                <TableCell align="left"><button  onClick={() => viewThreadAnalysis(row.id)} className={classes.viewBtn}>{!row.isError?'File Analysis':''}</button></TableCell>
+                                                    : <TableCell align="left"></TableCell>
+                                                }   
+                                                    
+                                                </TableRow>
+                                            ))}
+                                            </TableBody>
+                                        </Table>
+                                        <button onClick={clearAll} className={files.length>0?classes.deleteBtn:classes.deleteBtnDisabled}><DeleteIcon className={classes.btnIcon}/> Clear All</button>
                                     </div>
-                                 </div>
-                                 {rebuildFileNames.length>0 && 
-                                <div> 
-                                <h3>Rebuild Files
-                                    <button onClick={()=>open_file_exp(targetDir)} className={rebuildFileNames.length>0? classes.outFolderBtn:classes.outFolderBtnDissabled}><FolderIcon className={classes.btnIcon}/> Browse Output Folder</button>
-                                </h3>
-                                <Table className={classes.table} size="small" aria-label="a dense table">
-                                    <TableHead>
-                                    <TableRow>
-                                        <TableCell className={classes.texttBold}>Status</TableCell>
-                                        <TableCell align="left" className={classes.texttBold}>Original</TableCell>
-                                        <TableCell align="left" className={classes.texttBold}>Rebuilt</TableCell>
-                                        <TableCell align="left" className={classes.texttBold}>XML</TableCell>
-                                    </TableRow>
-                                    </TableHead>
-                                    <TableBody>
-                                    {rebuildFileNames.map((row) => (
-                                        <TableRow key={row.name}>
-                                        <TableCell align="left" className={classes.status}>{row.isError == true? <span>Failed</span>:<p>Success</p>}</TableCell>
-                                        <TableCell align="left"><a id="download_link" href={row.sourceFileUrl} download={row.name} className={classes.downloadLink} title={row.name}><FileCopyIcon className={classes.fileIcon}/> {row.name}</a></TableCell>
-                                        {
-                                            !row.isError ?
-                                                <TableCell align="left"><a id="download_link" href={row.url} download={row.name} className={classes.downloadLink} title={row.name}><FileCopyIcon className={classes.fileIcon}/>{row.name}</a></TableCell>
-                                                : <TableCell align="left">{row.msg}</TableCell>
-                                        }
-                                         {
-                                            !row.isError ?
-                                            <TableCell align="left"><button  onClick={() => viewXML(row.id)} className={classes.viewBtn}>{!row.isError?'View Report':''}</button></TableCell>
-                                                : <TableCell align="left"></TableCell>
-                                        }
-                                             
-                                        </TableRow>
-                                    ))}
-                                    </TableBody>
-                                </Table>
-                                <button onClick={clearAll} className={rebuildFileNames.length>0?classes.deleteBtn:classes.deleteBtnDisabled}><DeleteIcon className={classes.btnIcon}/> Clear All</button>
+                                    }
                                 </div>
-                                }
-                            </div>
-                            </div>
+                        </div>
                        
                         {
-                        rebuildFileNames.length>0 &&
+                        files.length>0 &&
                          <CardActions className={classes.actions}>
                              <TablePagination
                                   onChangePage        ={handleChangePage }
@@ -774,9 +960,11 @@ function RebuildFiles(){
                           </CardActions> 
                           }
                     </div>
-                    <Footer/>
+                    </div>
+                   
                 </main>
             </div>   
+            <Footer/>
         </div>
        
         

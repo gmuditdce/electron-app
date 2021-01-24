@@ -63,7 +63,7 @@
       margin-top: 20px;
     }
   </style>
-    <title>k8-proxy-desktop</title>
+    <title>Glasswall Desktop</title>
     <link rel="stylesheet" href="https://highlightjs.org/static/demo/styles/railscasts.css" />
   </head>
   <body style="width:100%;height:100%;margin:0; font-family: Roboto">
@@ -92,6 +92,8 @@
     <script>
       
          const { ipcRenderer } = require('electron');
+         localStorage.setItem("logs","")
+        localStorage.setItem("healthLogs","")
       //   const version = document.getElementById('version');
       //   ipcRenderer.send('app_version');
       //   console.log("Added version element");
@@ -105,7 +107,7 @@
         const restartButton = document.getElementById('restart-button');
 
         ipcRenderer.on('update_available', () => {
-          console.log('update_available in script some changes also there')
+          addRawLogLine('update_available in script some changes also there')
           ipcRenderer.removeAllListeners('update_available');
           message.innerText = 'A new update is available. Downloading now...';
           notification.classList.remove('hidden');

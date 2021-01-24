@@ -14,7 +14,7 @@ export default function Download() {
                 Download <span className="blue">Glasswall Desktop</span>
               </h2>
               <p className="p-large">
-              Glasswall desktop is a desktop based applications that provide multi file drag and drop rebuild workflow. Its open source. Download it today!
+              Glasswall desktop is a desktop based application that provides multi file drag and drop rebuild workflow.
               </p>
               <a
                 className = "btn-solid-lg"
@@ -23,26 +23,17 @@ export default function Download() {
                 </i> Download
               </a>
 
-              <a  href = {Utils.MAC_BUILD}>
+              <a  href = {Utils.MAC_BUILD} onClick = {()=>{ Utils.handleDownloadClick('Mac');}}>
                     <i className  ="supported-os-icon fab fa-apple"></i>
               </a>
-              <a  href = {Utils.WINDOWS_BUILD}>
+              <a  href = {Utils.WINDOWS_BUILD} onClick = {()=>{ Utils.handleDownloadClick('Windows');}}>
                     <i className ="supported-os-icon fab fa-windows"> </i>
                </a>
-               <a  href = {Utils.LINUX_BUILD}>
+               <a  href = {Utils.LINUX_BUILD} onClick = {()=>{ Utils.handleDownloadClick('Linux');}}>
                     <i className ="supported-os-icon fab fa-linux"></i>
               </a>
             </div>
           </div>
-          {/* <div className="col-lg-6 col-xl-7">
-            <div className="image-container">
-              <img
-                className = "img-fluid"
-                src       = {headerLens}
-                alt       = "alternative"
-              />
-            </div>
-          </div> */}
         </div>
       </div>
     </div>

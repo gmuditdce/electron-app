@@ -2,6 +2,8 @@ import * as React               from 'react';
 import { Grid }                 from '@material-ui/core';
 import { makeStyles }           from '@material-ui/core/styles';
 import * as Utils               from '../utils/utils';
+import Footer from '../components/Footer';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -88,12 +90,13 @@ const useStyles = makeStyles((theme) => ({
 function ReleaseNote(){
     const classes = useStyles(); 
     return(  
+        <>
         <Grid container>   
-            <a className={classes.webAnchor} href={Utils.WEBSITE_URL} title="k8-proxy-desktop">K8 Proxy Desktop</a>
+            <a className={classes.webAnchor} href={Utils.WEBSITE_URL} title="k8-proxy-desktop">Glasswall Desktop</a>
             <h3 className={classes.releaseHeading}> <a className={classes.webHeading} href={Utils.RELEASE_URL}> Realease Note</a></h3>
             {
-                Utils.RELEAE_NOTES.map(issue=>{
-                    return  <Grid className={classes.releaseNoteContainer}>                    
+                Utils.RELEAE_NOTES.map((issue, index)=>{
+                    return  <Grid key ={index} className={classes.releaseNoteContainer}>                    
                     <div className={classes.releaseGrid}>
                         <div className={classes.releaseList}>                            
                             <div className={classes.releaseVersion}>{Utils.VERSION}</div>
@@ -108,6 +111,8 @@ function ReleaseNote(){
                 })
             }
         </Grid>
+        <Footer />
+        </>
         
     )
     

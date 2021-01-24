@@ -24,7 +24,7 @@ jobs:
         with:
           node-version: '12.x'
 
-      - name: Build Proxy Desktop app
+      - name: Build Glasswall Desktop app
         uses: samuelmeuli/action-electron-builder@v1
         with:
           github_token: ${{ secrets.github_token }}
@@ -33,21 +33,21 @@ jobs:
         if: startsWith(matrix.os, 'macOS')
         uses: actions/upload-artifact@v2
         with:
-          name: "k8-proxy-desktop.dmg"
+          name: "glasswall-desktop.dmg"
           path: dist/*.dmg
 
       - name: Upload artifact - Windows
         if: startsWith(matrix.os, 'Windows')
         uses: actions/upload-artifact@v2
         with:
-          name: "k8-proxy-desktop.exe"
+          name: "glasswall-desktop.exe"
           path: dist/*.exe
 
       - name: Upload artifact - Linux Snap
         if: startsWith(matrix.os, 'Ubuntu')
         uses: actions/upload-artifact@v2
         with:
-          name: "k8-proxy-desktop.snap"
+          name: "glasswall-desktop.snap"
           path: dist/*.snap
 
       - name: Release electron app - Windows
@@ -61,6 +61,29 @@ jobs:
 
       - name: Release electron app - Mac
         if: startsWith(matrix.os, 'macOS')
+        uses: samuelmeuli/action-electron-builder@v1
+        with:
+          github_token: ${{ secrets.github_token }}
+          # If the commit is tagged with a version (e.g. "v1.0.0"),
+          # release the app after building
+          release: ${{ startsWith(github.ref, 'refs/tags/v') }}
+       
+      - name: Unit Test
+        run: npm run test-ut
+ 
+      - name: Install Snapcraft
+        if: startsWith(matrix.os, 'ubuntu')
+        uses: samuelmeuli/action-snapcraft@v1
+        
+      - name: Login Snapcraft
+        if: startsWith(matrix.os, 'ubuntu')
+        uses: samuelmeuli/action-snapcraft@v1
+        with:
+          snapcraft_token: ${{ secrets.snapcraft_token }}
+          skip_install: true
+       
+      - name: Release electron app - Unix
+        if: startsWith(matrix.os, 'ubuntu')
         uses: samuelmeuli/action-electron-builder@v1
         with:
           github_token: ${{ secrets.github_token }}

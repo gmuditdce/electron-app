@@ -1,3 +1,5 @@
+//const DEBUG: boolean = false;
+
 const {
     app,
     BrowserWindow,
@@ -5,6 +7,7 @@ const {
     Certificate,
     Menu,
     Tray,
+    globalShortcut,
     ipcMain}                = require('electron');
 const remote                = app.remote;
 const path                  = require('path')
@@ -13,118 +16,79 @@ const { dialog }            = require('electron')
 const dir                   = path.resolve(__dirname, `..`)
 const { autoUpdater }       = require('electron-updater');
 const log                   = require('electron-log');
+const DEBUG                 = require('electron-is-dev');
 
 autoUpdater.logger = log;
 autoUpdater.logger.transports.file.level = 'debug';
 log.info('App starting...');
 
-// function makeTray(){
-//     const tray = new Tray(path.resolve(dir, `assets`, `IconTemplate.png`))
- 
-//     const contextMenu = Menu.buildFromTemplate([
-//         {
-//           label: `Show Gatsby Desktop`,
-//           click: openMainWindow,
-//         },
-//         {
-//           label: `Quit...`,
-//           click: async (): Promise<void> => {
-//             openMainWindow()
-//             const { response } = await dialog.showMessageBox({
-//               message: `Quit Gatsby Desktop?`,
-//               detail: `This will stop all running sites`,
-//               buttons: [`Cancel`, `Quit`],
-//               defaultId: 1,
-//               type: `question`,
-//             })
-    
-//             if (response === 1) {
-//               app.quit()
-//             }
-//           },
-//         },
-//       ])
-//       tray.setContextMenu(contextMenu)
-// }
 
-
+log.info("process.platform" + process.platform)
 function createMenu(){
-    var template =[
-        {
-            label: 'Desktop'
-        },
-        {
-            label: 'K8-Proxy-Desktop',
-            submenu: [
-                {
-                    label: 'Home',
-                    click: openMainWindow,
-                },
-                {
-                    type:'separator'
-                }, 
-                {
-                    label:'About k8 Proxy Desktop',
-                    click: async (): Promise<void> => {
-                        const { response } = await dialog.showMessageBox({
-                        message: `About K8 Proxy Desktop`,
-                        detail: ` K8 Proxy desktop  applications that provides a single entry point to all K8 projects. Build with electron and react, it is aimed at providing a single window integration with GW git resources, file-drop, forensic-workbench, jupyter notebooks, and K8-* services.`,
-                        buttons: [ `Ok`],
-                        defaultId: 1,
-                        type: `info`,
-                        })
-                    },
-                },
-                // {
-                //     label:'Check For Update',
-                //     click: async (): Promise<void> => {
-                //         const { response } = await dialog.showMessageBox({
-                //         message: `Check For Update`,
-                //         detail: `Soon will rollout this feature`,
-                //         buttons: [ `Ok`],
-                //         defaultId: 1,
-                //         type: `info`,
-                //         })
-                //     },
-                // },
-                {
-                    type:'separator'
-                },
-                {
-                    type:'separator'
-                }, 
-                {
-                    label:'Quit',
-                    click: async (): Promise<void> => {
-                        //openMainWindow()
-                        const { response } = await dialog.showMessageBox({
-                        message: `Quit K8 Proxy Desktop?`,
-                        detail: `This will stop all running sites`,
-                        buttons: [`Cancel`, `Quit`],
-                        defaultId: 1,
-                        type: `question`,
-                        })
-                
-                        if (response === 1) {
-                            app.quit()
-                        }
-                    },
-                }
-            ]
-        },
-        {
-        role: 'help',
+  var template = [];
+  template.push({
+        label: 'Glasswall Desktop',
         submenu: [
             {
-                label: 'Learn More',
-                click() { 
-                    shell.openExternal(' https://github.com/k8-proxy/k8-proxy-desktop')
-                } ,
-                accelerator: 'CmdOrCtrl+Shift+L'
+                label: 'Home',
+                click: openMainWindow,
+            },
+            {
+                type:'separator'
+            }, 
+            {
+                label:'About Glasswall Desktop',
+                click: async (): Promise<void> => {
+                    const { response } = await dialog.showMessageBox({
+                    message: `About Glasswall Desktop`,
+                    detail: ` Glasswall Desktop is a desktop based applications that provide multi file drag and drop rebuild workflow.`,
+                    buttons: [ `Ok`],
+                    defaultId: 1,
+                    type: `info`,
+                    })
+                },
+            },
+            
+            {
+                type:'separator'
+            },
+            {
+                type:'separator'
+            }, 
+            {
+                label:'Quit Glasswall Desktop',
+                click: async (): Promise<void> => {
+                    //openMainWindow()
+                    const { response } = await dialog.showMessageBox({
+                    message: `Quit Glasswall Desktop?`,
+                    detail: `Do you really want to quit?`,
+                    buttons: [`Cancel`, `Quit`],
+                    defaultId: 1,
+                    type: `question`,
+                    })
+            
+                    if (response === 1) {
+                        app.quit()
+                    }
+                },
+                accelerator: 'CmdOrCtrl+Q'
             }
         ]
+    })
+
+    template.push({
+    role: 'help',
+    submenu: [
+        {
+            label: 'Learn More',
+            click() { 
+                shell.openExternal(' https://github.com/k8-proxy/glasswall-desktop/blob/main/README.md')
+            },
+            accelerator: 'CmdOrCtrl+H'
         }
     ]
+    });
+    
     const menu = Menu.buildFromTemplate(template)
     Menu.setApplicationMenu(menu)
 
@@ -133,13 +97,17 @@ function createMenu(){
 
 function makeWindow(): typeof BrowserWindow {
     
-    const tray = new Tray(path.resolve(dir, `assets`, `IconTemplate.png`))
+    let iconPath = path.join(__dirname, "../assets", "Favicon.png");
+    if(process.platform == "darwin")
+      iconPath = path.join(__dirname, "../assets", "Favicon.icns");
+
+    log.info(iconPath);
     let window = new BrowserWindow({
-        title: `k8 Proxy Desktop`,
-        width: 1200,
-        height: 800,
+        title: `Glasswall Desktop`,
+        width: 1500,
+        height: 1000,
         fullscreenable: false,
-        icon:tray,
+        icon:iconPath,
         trafficLightPosition: { x: 8, y: 18 },
         webPreferences: {
             nodeIntegrationInWorker: true,
@@ -152,13 +120,16 @@ function makeWindow(): typeof BrowserWindow {
     })
    
     //to add chrome dev tools 
-    //window.webContents.openDevTools();
+    if(DEBUG){
+      window.webContents.openDevTools();
+    }
+   
     return window;
 }
 
 let mainWindow: typeof BrowserWindow | undefined
 
-function openMainWindow(): void {
+function openMainWindow(): void {    
     let url = `file://${__dirname}/../ui/index.html`;
 
     if (!mainWindow || mainWindow.isDestroyed()) {
@@ -194,16 +165,19 @@ app.on('certificate-error', (event: Event, contents: typeof WebContents, url: St
 })
 
 app.on('window-all-closed', () => {
-  if (process.platform !== 'darwin') {
-    app.quit()
-  }
+  
+  app.quit();
 })
+
+
+
 
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     makeWindow()
   }
 })
+
 
 
 ipcMain.on('app_version', (event:any) => {

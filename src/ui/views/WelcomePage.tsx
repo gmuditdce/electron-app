@@ -91,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
 
 function WelcomePage(){
     const classes = useStyles(); 
-    const [version, setVersion] = React.useState("0.1")
+    const [version, setVersion] = React.useState("0.1.0")
     
     const getVersion = () =>{   
         ipcRenderer.send('app_version');
@@ -115,12 +115,12 @@ function WelcomePage(){
             <Container className={classes.fullWidth}>              
                 <Grid container spacing={2}>
                     <Grid item xs={9} className={classes.gridItemLeft}>
-                        <h2 className={classes.welcomeTxt}>Welcome to Glasswall Proxy Desktop</h2>
+                        <h2 className={classes.welcomeTxt}>Welcome to Glasswall Desktop</h2>
                         <div className={classes.logo}>
                             <img src={logo} className={classes.logoImg}></img>
-                            <h2 className={classes.heading}>Glasswall Proxy Desktop</h2>
+                            <h2 className={classes.heading}>Glasswall Desktop</h2>
                             <h6 className={classes.version}>{version}</h6>
-                            <p className={classes.abtContent}>Glasswall proxy desktop is a desktop based applications that provide multi file drag and drop rebuild workflow.</p>
+                            <p className={classes.abtContent}>Glasswall Desktop is a desktop application that provides multi file drag and drop rebuild workflow.</p>
                         </div>
                         <div onClick={getStarted} className={classes.btnGroup}>
                             <Link to="/rebuildFiles" className={classes.getStartBtn}>Get Started</Link>                        

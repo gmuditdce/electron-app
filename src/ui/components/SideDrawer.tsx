@@ -18,15 +18,19 @@ import ArrowBackIcon            from '@material-ui/icons/ArrowBack';
 import { NavLink, Link }        from 'react-router-dom'
 import Logo                     from '../assets/images/logo.png'
 import Navbar                   from '../components/Navbar'
-import gitIcon                  from '../assets/images/git.png'
-import desktopApp               from '../assets/images/desktop.png'
-import FileDropIcon             from '../assets/images/fileDrop.png'
-import Slack                    from '../assets/images/slack.png'
-import GWLogo                   from '../assets/images/GWLogo.png'
-import jupyter                  from '../assets/images/jupyter.png'
 import RebuildIcon              from '../assets/images/rebuild.png'
-import { BorderBottom }         from '@material-ui/icons';
+import DockerIcon               from '../assets/images/docker.png'
+import SettingIcon              from '../assets/images/setting.png'
 import HomeIcon                 from '../assets/images/homeIcon.png';
+import Tooltip                  from '@material-ui/core/Tooltip';
+import dockerIcon               from '../assets/images/docker.png'
+import HealthCheck              from '../assets/images/healthcheck.png';
+import LOGICON                  from '../assets/images/log.png';
+import SessionIcon              from '../assets/images/session.png';
+import PolicyIcon              from '../assets/images/policyFlag.png';
+import PastPolicyIcon              from '../assets/images/pastpolicy.png';
+
+import { useLocation }          from 'react-router-dom'
 
 const drawerWidth = 280;
 
@@ -58,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
         maxWidth:               '100%',
     },
     active: {
-        background:             '#ddd',
+        background:             '#144e78 !important',
         width:                  '100%'
     },
     navLink: {
@@ -67,6 +71,7 @@ const useStyles = makeStyles((theme) => ({
         paddingLeft:            '10px'
     },
     appBar: {
+        color:                  '#fff',   
         background:             '#0c3451',
         zIndex:                 theme.zIndex.drawer + 1,
         transition:             theme.transitions.create(['width', 'margin'], {
@@ -75,6 +80,7 @@ const useStyles = makeStyles((theme) => ({
         }),
     },
     appBarShift: {
+        background:             '#0c3451',
         marginLeft:             drawerWidth,
         width:                  `calc(100% - ${drawerWidth}px)`,
         transition:             theme.transitions.create(['width', 'margin'], {
@@ -89,18 +95,25 @@ const useStyles = makeStyles((theme) => ({
         display:                'none',
     },
     drawer: {
+        background:             '#0c3451',
         width:                  drawerWidth,
         flexShrink:             0,
         whiteSpace:             'nowrap',
     },
     drawerOpen: {
+        color:                  '#fff',
+        background:             '#0c3451',
         width:                  drawerWidth,
         transition:             theme.transitions.create('width', {
             easing:             theme.transitions.easing.sharp,
-            duration:           theme.transitions.duration.enteringScreen,
+            duration:           theme.transitions.duration.enteringScreen,            
         }),
+        '& button':{
+            color:          '#fff'
+        }
     },
     drawerClose: {
+        background:             '#0c3451',
         transition:             theme.transitions.create('width', {
             easing:             theme.transitions.easing.sharp,
             duration:           theme.transitions.duration.leavingScreen,
@@ -113,6 +126,7 @@ const useStyles = makeStyles((theme) => ({
         },
     },
     toolbar: {
+        color:                  '#fff',
         display:                'flex',
         alignItems:             'center',
         justifyContent:         'flex-end',
@@ -124,76 +138,128 @@ const useStyles = makeStyles((theme) => ({
             paddingTop:          '10px',
             paddingBottom:       '10px',
             borderBottom:        '1px solid #ccc',
+            position:            'relative',
             '&:hover':{
-                background:      '#ddd',                
+                background:      '#144e78',        
+
+                '& div':{
+                    display:          'block'
+                }
             }
         }
     },
     navText:{
         '& span':{
             fontSize:             '15px',
-            fontWeight:           'bold'
+            color:                '#fff'
         }        
+    },
+    tooltipBox:{
+        display:                 'none',
+        position:                'fixed',
+        background:              '#5ea1e7',
+        color:                   '#fff',
+        margin:                  '10px',
+        padding:                 '20px',
+        borderRadius:            '5px',
+        left:                    '45px',
+        '&::before':{
+            content:             '" "',
+            height:              '10px',
+            width:               '10px',
+            position:            'absolute',
+            background:          '#5ea1e7',
+            left:                '-5px',
+            transform:           'rotate(45deg)',
+        }
     }
 }));
 type headerOptions = {
     showBack: boolean
 }
 function SideDrawer({ showBack }: headerOptions) {
+    const location = useLocation();
+    //console.log(location.pathname);
+
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
+    const [change, setChange] = React.useState(true);
+
+    React.useEffect(()=>{
+        
+    },[change]);
 
     const handleDrawerOpen = () => {
         setOpen(true);
+       
     };
 
     const handleDrawerClose = () => {
         setOpen(false);
     };
 
+      
+    const handleClick =()=>{
+        if(sessionStorage.getItem("policy_changes")){
+            alert("You have unsaved policy");
+            setChange(false);
+            sessionStorage.removeItem("policy_changes")
+        }else{
+            setChange(true);
+        }
+       
+    }
+
+
     const navData = [
-    // {
-    //     navName :   'Git Browser',
-    //     navIcon :   gitIcon,
-    //     anchLink:   '/home'       
-    // },
-    // {
-    //     navName :   'File-drop',
-    //     navIcon :   FileDropIcon,
-    //     anchLink:   '/fileDrop'     
-    // },
-    // {
-    //     navName:    'Dashboard Kubernetes pods',
-    //     navIcon:    desktopApp,
-    //     anchLink:   '/dashboardK8'    
-    // },
-    // {
-    //     navName:    'Slack UI for bots', 
-    //     navIcon:    Slack,
-    //     anchLink:   '/slackBot'    
-    // },
-    // {
-    //     navName:    'Forensic Workbench', 
-    //     navIcon:    GWLogo,
-    //     anchLink:   '/fw'    
-    // },
-    // {
-    //     navName:    'Jupyter Notebooks', 
-    //     navIcon:    jupyter,
-    //     anchLink:   '/jupyterNotebook'    
-    // },
     {
         navName:    'Home',
         navIcon:    HomeIcon,
-        anchLink:   '/homePage'    
+        anchLink:   '/home',    
     },
     {
-        navName:    'Rebuild Files',
+        navName:    'Cloud Rebuild Files',
         navIcon:    RebuildIcon,
         anchLink:   '/rebuildFiles'    
+    },
+    {
+        navName:    'Rebuild Files With Docker',
+        navIcon:    DockerIcon,
+        anchLink:   '/dockerrebuildFiles'
+    },
+    {
+        navName:    'Rebuild Policy',
+        navIcon:    PolicyIcon,
+        anchLink:   '/policy'
+    },
+    {
+        navName:    'Past Rebuild Policy',
+        navIcon:    PastPolicyIcon,
+        anchLink:   '/pastPolicy'
+    },
+    {
+        navName:    'Rebuilt Sessions',
+        navIcon:    SessionIcon,
+        anchLink:   '/sessions'
+    },
+    {
+        navName:    'Health Check',
+        navIcon:    HealthCheck,
+        anchLink:   '/configure'
+    },
+    {
+        navName:    'Raw Logs',
+        navIcon:    LOGICON,
+        anchLink:   '/logs'
+    },
+    {
+        navName:    'Settings',
+        navIcon:    SettingIcon,
+        anchLink:   '/settings'
     }
 ]
+
 
     return (
         <div>
@@ -245,14 +311,17 @@ function SideDrawer({ showBack }: headerOptions) {
                     </IconButton>
                 </div>
                 <Divider />
+                
                 <List className={classes.navList}>
                 {navData.map((nav, index) => (
-                        <ListItem key={index} button component={NavLink} to={nav.anchLink} activeClassName={classes.active}>
+                        // <ListItem key={index} button component={NavLink} to={nav.anchLink} activeClassName={classes.active} selected ={index ==1}>
+                        <ListItem  onClick={handleClick} key={index} button component={NavLink} disabled ={ sessionStorage.getItem("docker_session_runnning") ?true:false} to={nav.anchLink} activeClassName={classes.active} selected = {location.pathname == nav.anchLink} >                               
                             <ListItemIcon><img src={nav.navIcon}  className={classes.icons}></img></ListItemIcon>
-                            <ListItemText primary={nav.navName} className={classes.navText}/>
+                            <div className={classes.tooltipBox}>{nav.navName}</div>
+                                <ListItemText primary={nav.navName} className={classes.navText}/>
                         </ListItem>
                     ))}
-                </List>               
+                </List>           
             </Drawer>
         </div>
     );
