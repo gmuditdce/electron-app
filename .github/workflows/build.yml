@@ -30,7 +30,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
 
       - name: Unit Test
-        run:
+        run:|
           docker pull "glasswallsolutions/evaluationsdk:rebuild"
           mkdir ~/.glasswall-desktop/processed
           npm run test-ut
