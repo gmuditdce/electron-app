@@ -30,6 +30,7 @@ jobs:
           github_token: ${{ secrets.github_token }}
 
       - name: Unit Test
+        if: startsWith(matrix.os, 'Ubuntu
         run: |
           docker pull "glasswallsolutions/evaluationsdk:rebuild"
           mkdir ~/.glasswall-desktop/
