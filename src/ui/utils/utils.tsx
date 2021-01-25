@@ -1,3 +1,5 @@
+import { isNumericLiteral } from "typescript";
+
 var child_process                         = require("child_process");
 const path                                = require('path');
 var fs                                    = require('fs');
@@ -664,14 +666,19 @@ export const sanitize_file_name = (file_name: string)=> {
 
 
 export const getLogsPath = ()=>{
-  if(!fs.existsSync(getAppDataPath() + getPathSep() + _LOGS_FOLDER)){
-    fs.mkdirSync(getAppDataPath() + getPathSep() + _LOGS_FOLDER);
+  let logDir = getAppDataPath() + getPathSep() + _LOGS_FOLDER);
+  if(!fs.existsSync(logDir){
+    fs.mkdirSync(logDir);
   }  
-  if(!fs.existsSync(getAppDataPath() + getPathSep() + _LOGS_FOLDER+getPathSep()+_LOGS_FILE)){
-    fs.openSync(getAppDataPath() + getPathSep() + _LOGS_FOLDER+getPathSep()+_LOGS_FILE,'w');
-    fs.closeSync(getAppDataPath() + getPathSep() + _LOGS_FOLDER+getPathSep()+_LOGS_FILE,'w');
+  var logFile = logDir + +getPathSep()+_LOGS_FILE
+  if(!fs.existsSync(logFile){
+    console.log('Creating log file '+logFile)
+    let fd = fs.openSync(logFile, 'w')
+    if(fd != null && isNaN(fd)){
+      fs.closeSync() 
+    }
   }
-  return getAppDataPath() + getPathSep() + _LOGS_FOLDER + getPathSep() + _LOGS_FILE
+  return logFile
 }
 
  export const getDockerDefaultOutputFOlder =()=>{
