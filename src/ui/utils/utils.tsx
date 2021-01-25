@@ -666,8 +666,8 @@ export const sanitize_file_name = (file_name: string)=> {
 
 
 export const getLogsPath = ()=>{
-  let logDir = getAppDataPath() + getPathSep() + _LOGS_FOLDER);
-  if(!fs.existsSync(logDir){
+  let logDir = getAppDataPath() + getPathSep() + _LOGS_FOLDER;
+  if(!fs.existsSync(logDir)){
     fs.mkdirSync(logDir);
   }  
   var logFile = logDir + +getPathSep()+_LOGS_FILE
