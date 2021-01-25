@@ -671,7 +671,7 @@ export const getLogsPath = ()=>{
     fs.mkdirSync(logDir);
   }  
   var logFile = logDir + +getPathSep()+_LOGS_FILE
-  if(!fs.existsSync(logFile){
+  if(!fs.existsSync(logFile)){
     console.log('Creating log file '+logFile)
     let fd = fs.openSync(logFile, 'w')
     if(fd != null && isNaN(fd)){
