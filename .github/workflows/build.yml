@@ -32,6 +32,7 @@ jobs:
       - name: Unit Test
         run: |
           docker pull "glasswallsolutions/evaluationsdk:rebuild"
+          mkdir ~/.glasswall-desktop/
           mkdir ~/.glasswall-desktop/processed
           npm run test-ut
  
