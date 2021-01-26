@@ -40,6 +40,7 @@ jobs:
       - name: Unit Test Windows
         if: startsWith(matrix.os, 'Windows')
         run: |
+          "C:/Program Files/Docker/Docker/DockerCli" -SwitchDaemon -SwitchWindowsEngine
           docker pull "glasswallsolutions/evaluationsdk:rebuild"
           mkdir ~/.glasswall-desktop/
           mkdir ~/.glasswall-desktop/processed
