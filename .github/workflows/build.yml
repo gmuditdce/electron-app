@@ -40,14 +40,8 @@ jobs:
       - name: Unit Test OSX
         if: startsWith(matrix.os, 'macOS')
         run: |
-          brew cask install docker virtualbox
-          brew install docker-machine
-          docker-machine create --driver virtualbox default
-          docker-machine restart
-          docker pull "glasswallsolutions/evaluationsdk:rebuild"
-          mkdir ~/.glasswall-desktop/
-          mkdir ~/.glasswall-desktop/processed
-          npm run test-ut
+          brew install docker-machine docker
+          sudo docker –version
  
       - name: Upload artifact - Mac
         if: startsWith(matrix.os, 'macOS')
