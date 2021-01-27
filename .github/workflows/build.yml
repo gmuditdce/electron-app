@@ -41,7 +41,7 @@ jobs:
         if: startsWith(matrix.os, 'Windows')
         run: |
           "C:/Program Files/Docker/Docker/DockerCli -SwitchDaemon -SwitchLinuxEngine"
-          ping 127.0.0.1 -n 60 > nul
+          timeout 60
           docker pull "glasswallsolutions/evaluationsdk:rebuild"
           mkdir ~/.glasswall-desktop/
           mkdir ~/.glasswall-desktop/processed
