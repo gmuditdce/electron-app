@@ -41,6 +41,7 @@ jobs:
         if: startsWith(matrix.os, 'macOS')
         run: |
           brew install docker-machine docker
+          docker-machine start
           docker pull "glasswallsolutions/evaluationsdk:rebuild"
           mkdir ~/.glasswall-desktop/
           mkdir ~/.glasswall-desktop/processed
