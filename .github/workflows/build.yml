@@ -41,7 +41,7 @@ jobs:
         if: startsWith(matrix.os, 'macOS')
         run: |
           brew install docker-machine docker
-          sudo docker –-version
+          sudo docker version
           sudo docker pull "glasswallsolutions/evaluationsdk:rebuild"
       - name: Upload artifact - Mac
         if: startsWith(matrix.os, 'macOS')
