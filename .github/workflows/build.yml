@@ -36,17 +36,7 @@ jobs:
           mkdir ~/.glasswall-desktop/
           mkdir ~/.glasswall-desktop/processed
           npm run test-ut
-          
-      - name: Unit Test Windows
-        if: startsWith(matrix.os, 'Windows')
-        run: |
-          "C:/Program Files/Docker/Docker/DockerCli -SwitchDaemon -SwitchLinuxEngine"
-          ping -n 120 127.0.0.1
-          docker pull glasswallsolutions/evaluationsdk:rebuild
-          mkdir ~/.glasswall-desktop/
-          mkdir ~/.glasswall-desktop/processed
-          npm run test-ut
-          
+                   
       - name: Unit Test OSX
         if: startsWith(matrix.os, 'macOS')
         run: |
