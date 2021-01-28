@@ -1,0 +1,733 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`LoggerView Snapshots should render our Snapshots correctly 1`] = `
+<div
+  className="makeStyles-root-1"
+>
+  <SideDrawer
+    showBack={false}
+  />
+  <main
+    className="makeStyles-content-3"
+  >
+    <div
+      className="makeStyles-toolbar-2"
+    />
+    <div
+      className="makeStyles-contentArea-4"
+    >
+      <div>
+        <h3>
+          Raw Logs 
+        </h3>
+        <Highlight
+          language="javascript"
+        >
+          [2021-01-28 09:53:26:0313] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 09:53:27:0416] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 09:53:23:0409] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\bccf8b13-a259-4bc1-9289-4adb497e79cf\\input
+[2021-01-28 09:53:23:0411] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\bccf8b13-a259-4bc1-9289-4adb497e79cf\\output
+[2021-01-28 09:53:23:0412] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\bccf8b13-a259-4bc1-9289-4adb497e79cf, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\bccf8b13-a259-4bc1-9289-4adb497e79cf\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\bccf8b13-a259-4bc1-9289-4adb497e79cf\\output
+[2021-01-28 09:53:26:0303] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f6142cc7-d8b6-47d8-8a8c-9e53d684f037\\input
+[2021-01-28 09:53:26:0304] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f6142cc7-d8b6-47d8-8a8c-9e53d684f037\\output
+[2021-01-28 09:53:26:0305] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f6142cc7-d8b6-47d8-8a8c-9e53d684f037, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f6142cc7-d8b6-47d8-8a8c-9e53d684f037\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\f6142cc7-d8b6-47d8-8a8c-9e53d684f037\\output
+[2021-01-28 10:06:14:0641] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:06:17:0270] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:06:12:0048] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2ac75744-d560-49f3-964d-f66bba61ecfc\\input
+[2021-01-28 10:06:12:0052] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2ac75744-d560-49f3-964d-f66bba61ecfc\\output
+[2021-01-28 10:06:12:0054] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2ac75744-d560-49f3-964d-f66bba61ecfc, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2ac75744-d560-49f3-964d-f66bba61ecfc\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\2ac75744-d560-49f3-964d-f66bba61ecfc\\output
+[2021-01-28 10:06:14:0679] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\afc0f340-a2d3-4467-96dc-5c56e1ce109a\\input
+[2021-01-28 10:06:14:0680] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\afc0f340-a2d3-4467-96dc-5c56e1ce109a\\output
+[2021-01-28 10:06:14:0681] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\afc0f340-a2d3-4467-96dc-5c56e1ce109a, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\afc0f340-a2d3-4467-96dc-5c56e1ce109a\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\afc0f340-a2d3-4467-96dc-5c56e1ce109a\\output
+[2021-01-28 10:07:37:0748] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:07:38:0725] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:07:35:0397] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\408d7695-9419-412e-b884-b1a4f57e8dd6\\input
+[2021-01-28 10:07:35:0400] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\408d7695-9419-412e-b884-b1a4f57e8dd6\\output
+[2021-01-28 10:07:35:0401] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\408d7695-9419-412e-b884-b1a4f57e8dd6, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\408d7695-9419-412e-b884-b1a4f57e8dd6\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\408d7695-9419-412e-b884-b1a4f57e8dd6\\output
+[2021-01-28 10:07:38:0003] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\34126d77-82c4-4a0d-b13e-2e30fb5c341d\\input
+[2021-01-28 10:07:38:0004] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\34126d77-82c4-4a0d-b13e-2e30fb5c341d\\output
+[2021-01-28 10:07:38:0005] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\34126d77-82c4-4a0d-b13e-2e30fb5c341d, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\34126d77-82c4-4a0d-b13e-2e30fb5c341d\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\34126d77-82c4-4a0d-b13e-2e30fb5c341d\\output
+[2021-01-28 10:08:45:0039] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:08:47:0474] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:08:41:0202] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a38b32b1-5c7a-4d15-b73d-dc36b2e73ff5\\input
+[2021-01-28 10:08:41:0205] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a38b32b1-5c7a-4d15-b73d-dc36b2e73ff5\\output
+[2021-01-28 10:08:41:0207] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a38b32b1-5c7a-4d15-b73d-dc36b2e73ff5, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a38b32b1-5c7a-4d15-b73d-dc36b2e73ff5\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\a38b32b1-5c7a-4d15-b73d-dc36b2e73ff5\\output
+[2021-01-28 10:08:45:0072] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\06463442-9346-4000-8e46-70eca66255b0\\input
+[2021-01-28 10:08:45:0073] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\06463442-9346-4000-8e46-70eca66255b0\\output
+[2021-01-28 10:08:45:0074] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\06463442-9346-4000-8e46-70eca66255b0, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\06463442-9346-4000-8e46-70eca66255b0\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\06463442-9346-4000-8e46-70eca66255b0\\output
+[2021-01-28 10:12:28:0870] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:12:29:0725] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:12:26:0794] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2b059d5d-5777-4c4e-b6cf-7239c042ac41\\input
+[2021-01-28 10:12:26:0797] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2b059d5d-5777-4c4e-b6cf-7239c042ac41\\output
+[2021-01-28 10:12:26:0799] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2b059d5d-5777-4c4e-b6cf-7239c042ac41, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2b059d5d-5777-4c4e-b6cf-7239c042ac41\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\2b059d5d-5777-4c4e-b6cf-7239c042ac41\\output
+[2021-01-28 10:12:29:0098] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5d088a16-fd9a-40ce-a9ef-b3e0551418fa\\input
+[2021-01-28 10:12:29:0099] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5d088a16-fd9a-40ce-a9ef-b3e0551418fa\\output
+[2021-01-28 10:12:29:0100] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5d088a16-fd9a-40ce-a9ef-b3e0551418fa, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5d088a16-fd9a-40ce-a9ef-b3e0551418fa\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\5d088a16-fd9a-40ce-a9ef-b3e0551418fa\\output
+[2021-01-28 10:13:49:0221] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:13:52:0322] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:13:45:0493] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9b0a6d74-bd07-4218-ba33-d80118231258\\input
+[2021-01-28 10:13:45:0496] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9b0a6d74-bd07-4218-ba33-d80118231258\\output
+[2021-01-28 10:13:45:0498] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9b0a6d74-bd07-4218-ba33-d80118231258, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9b0a6d74-bd07-4218-ba33-d80118231258\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\9b0a6d74-bd07-4218-ba33-d80118231258\\output
+[2021-01-28 10:13:49:0425] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\143d65a8-594f-4d69-bd8b-efb2c28d7037\\input
+[2021-01-28 10:13:49:0426] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\143d65a8-594f-4d69-bd8b-efb2c28d7037\\output
+[2021-01-28 10:13:49:0427] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\143d65a8-594f-4d69-bd8b-efb2c28d7037, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\143d65a8-594f-4d69-bd8b-efb2c28d7037\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\143d65a8-594f-4d69-bd8b-efb2c28d7037\\output
+[2021-01-28 10:21:13:0414] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:21:14:0312] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:21:11:0264] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f4f94406-053f-41c5-a8c5-a34e5e3c057e\\input
+[2021-01-28 10:21:11:0267] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f4f94406-053f-41c5-a8c5-a34e5e3c057e\\output
+[2021-01-28 10:21:11:0268] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f4f94406-053f-41c5-a8c5-a34e5e3c057e, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f4f94406-053f-41c5-a8c5-a34e5e3c057e\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\f4f94406-053f-41c5-a8c5-a34e5e3c057e\\output
+[2021-01-28 10:21:13:0662] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9e03349a-7c1e-4583-bac0-3f7949279df8\\input
+[2021-01-28 10:21:13:0663] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9e03349a-7c1e-4583-bac0-3f7949279df8\\output
+[2021-01-28 10:21:13:0665] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9e03349a-7c1e-4583-bac0-3f7949279df8, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9e03349a-7c1e-4583-bac0-3f7949279df8\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\9e03349a-7c1e-4583-bac0-3f7949279df8\\output
+[2021-01-28 10:21:46:0100] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:21:48:0134] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:21:42:0766] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\4d8d6094-265c-439b-a66e-25924619da80\\input
+[2021-01-28 10:21:42:0769] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\4d8d6094-265c-439b-a66e-25924619da80\\output
+[2021-01-28 10:21:42:0771] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\4d8d6094-265c-439b-a66e-25924619da80, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\4d8d6094-265c-439b-a66e-25924619da80\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\4d8d6094-265c-439b-a66e-25924619da80\\output
+[2021-01-28 10:21:46:0134] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e6d8a6d5-11c1-4efc-9d07-8f4df25b35ee\\input
+[2021-01-28 10:21:46:0135] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e6d8a6d5-11c1-4efc-9d07-8f4df25b35ee\\output
+[2021-01-28 10:21:46:0136] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e6d8a6d5-11c1-4efc-9d07-8f4df25b35ee, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e6d8a6d5-11c1-4efc-9d07-8f4df25b35ee\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\e6d8a6d5-11c1-4efc-9d07-8f4df25b35ee\\output
+[2021-01-28 10:22:15:0906] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:22:16:0856] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:22:13:0499] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\422436a5-adf5-450f-95aa-ef6675b9166a\\input
+[2021-01-28 10:22:13:0502] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\422436a5-adf5-450f-95aa-ef6675b9166a\\output
+[2021-01-28 10:22:13:0503] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\422436a5-adf5-450f-95aa-ef6675b9166a, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\422436a5-adf5-450f-95aa-ef6675b9166a\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\422436a5-adf5-450f-95aa-ef6675b9166a\\output
+[2021-01-28 10:22:15:0942] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\42c3316e-2bec-47b7-9c6a-cafddfcc3f7c\\input
+[2021-01-28 10:22:15:0943] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\42c3316e-2bec-47b7-9c6a-cafddfcc3f7c\\output
+[2021-01-28 10:22:15:0944] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\42c3316e-2bec-47b7-9c6a-cafddfcc3f7c, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\42c3316e-2bec-47b7-9c6a-cafddfcc3f7c\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\42c3316e-2bec-47b7-9c6a-cafddfcc3f7c\\output
+[2021-01-28 10:24:37:0831] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:24:39:0852] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:24:34:0136] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5d83e0e9-1db0-4e5c-968d-9bbf3438f7c1\\input
+[2021-01-28 10:24:34:0138] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5d83e0e9-1db0-4e5c-968d-9bbf3438f7c1\\output
+[2021-01-28 10:24:34:0140] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5d83e0e9-1db0-4e5c-968d-9bbf3438f7c1, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5d83e0e9-1db0-4e5c-968d-9bbf3438f7c1\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\5d83e0e9-1db0-4e5c-968d-9bbf3438f7c1\\output
+[2021-01-28 10:24:37:0884] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9223bbc1-e1e2-402d-99aa-fd0bd06f3d1c\\input
+[2021-01-28 10:24:37:0885] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9223bbc1-e1e2-402d-99aa-fd0bd06f3d1c\\output
+[2021-01-28 10:24:37:0886] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9223bbc1-e1e2-402d-99aa-fd0bd06f3d1c, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9223bbc1-e1e2-402d-99aa-fd0bd06f3d1c\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\9223bbc1-e1e2-402d-99aa-fd0bd06f3d1c\\output
+[2021-01-28 10:27:51:0109] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:27:52:0215] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:27:48:0582] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2d6e841b-c894-4c85-8fb8-37b323fee3b0\\input
+[2021-01-28 10:27:48:0585] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2d6e841b-c894-4c85-8fb8-37b323fee3b0\\output
+[2021-01-28 10:27:48:0586] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2d6e841b-c894-4c85-8fb8-37b323fee3b0, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\2d6e841b-c894-4c85-8fb8-37b323fee3b0\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\2d6e841b-c894-4c85-8fb8-37b323fee3b0\\output
+[2021-01-28 10:27:51:0158] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f15048c0-4c14-4ffe-aecc-0daab7b70bc5\\input
+[2021-01-28 10:27:51:0159] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f15048c0-4c14-4ffe-aecc-0daab7b70bc5\\output
+[2021-01-28 10:27:51:0160] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f15048c0-4c14-4ffe-aecc-0daab7b70bc5, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f15048c0-4c14-4ffe-aecc-0daab7b70bc5\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\f15048c0-4c14-4ffe-aecc-0daab7b70bc5\\output
+[2021-01-28 10:28:47:0788] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:28:50:0032] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:28:44:0074] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5727d1be-ea14-4479-8fdc-1fccbbb43162\\input
+[2021-01-28 10:28:44:0076] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5727d1be-ea14-4479-8fdc-1fccbbb43162\\output
+[2021-01-28 10:28:44:0078] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5727d1be-ea14-4479-8fdc-1fccbbb43162, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5727d1be-ea14-4479-8fdc-1fccbbb43162\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\5727d1be-ea14-4479-8fdc-1fccbbb43162\\output
+[2021-01-28 10:28:47:0983] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f7ab4257-f018-4ec7-9da5-9466bbd21415\\input
+[2021-01-28 10:28:47:0984] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f7ab4257-f018-4ec7-9da5-9466bbd21415\\output
+[2021-01-28 10:28:47:0988] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f7ab4257-f018-4ec7-9da5-9466bbd21415, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f7ab4257-f018-4ec7-9da5-9466bbd21415\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\f7ab4257-f018-4ec7-9da5-9466bbd21415\\output
+[2021-01-28 10:40:49:0420] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:40:50:0321] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:40:46:0972] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6b4737b4-089a-4eac-93fd-c2c69a52058e\\input
+[2021-01-28 10:40:46:0976] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6b4737b4-089a-4eac-93fd-c2c69a52058e\\output
+[2021-01-28 10:40:46:0978] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6b4737b4-089a-4eac-93fd-c2c69a52058e, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6b4737b4-089a-4eac-93fd-c2c69a52058e\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\6b4737b4-089a-4eac-93fd-c2c69a52058e\\output
+[2021-01-28 10:40:49:0742] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ea4507d6-424a-4491-9334-dbec3d90a953\\input
+[2021-01-28 10:40:49:0743] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ea4507d6-424a-4491-9334-dbec3d90a953\\output
+[2021-01-28 10:40:49:0744] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ea4507d6-424a-4491-9334-dbec3d90a953, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ea4507d6-424a-4491-9334-dbec3d90a953\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\ea4507d6-424a-4491-9334-dbec3d90a953\\output
+[2021-01-28 10:41:56:0926] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:41:58:0938] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:41:53:0182] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c2a29347-4ba4-4a5c-9c21-1954d6bf0d06\\input
+[2021-01-28 10:41:53:0185] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c2a29347-4ba4-4a5c-9c21-1954d6bf0d06\\output
+[2021-01-28 10:41:53:0187] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c2a29347-4ba4-4a5c-9c21-1954d6bf0d06, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c2a29347-4ba4-4a5c-9c21-1954d6bf0d06\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\c2a29347-4ba4-4a5c-9c21-1954d6bf0d06\\output
+[2021-01-28 10:41:57:0075] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9d91a0d4-6a58-459d-9706-03a265cbf093\\input
+[2021-01-28 10:41:57:0076] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9d91a0d4-6a58-459d-9706-03a265cbf093\\output
+[2021-01-28 10:41:57:0080] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9d91a0d4-6a58-459d-9706-03a265cbf093, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9d91a0d4-6a58-459d-9706-03a265cbf093\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\9d91a0d4-6a58-459d-9706-03a265cbf093\\output
+[2021-01-28 10:42:26:0519] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:42:27:0522] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 10:42:24:0180] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5533ecae-0b2a-44b8-8ef9-f62e566cda1e\\input
+[2021-01-28 10:42:24:0182] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5533ecae-0b2a-44b8-8ef9-f62e566cda1e\\output
+[2021-01-28 10:42:24:0184] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5533ecae-0b2a-44b8-8ef9-f62e566cda1e, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5533ecae-0b2a-44b8-8ef9-f62e566cda1e\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\5533ecae-0b2a-44b8-8ef9-f62e566cda1e\\output
+[2021-01-28 10:42:26:0516] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6348c82b-a4e3-4c15-b0e0-41f469e0a5f0\\input
+[2021-01-28 10:42:26:0517] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6348c82b-a4e3-4c15-b0e0-41f469e0a5f0\\output
+[2021-01-28 10:42:26:0521] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6348c82b-a4e3-4c15-b0e0-41f469e0a5f0, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6348c82b-a4e3-4c15-b0e0-41f469e0a5f0\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\6348c82b-a4e3-4c15-b0e0-41f469e0a5f0\\output
+[2021-01-28 13:23:18:0208] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 13:23:19:0098] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 13:23:14:0754] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b3bbd07d-0e71-4bae-a219-4ccd3257cf4c\\input
+[2021-01-28 13:23:14:0757] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b3bbd07d-0e71-4bae-a219-4ccd3257cf4c\\output
+[2021-01-28 13:23:14:0758] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b3bbd07d-0e71-4bae-a219-4ccd3257cf4c, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b3bbd07d-0e71-4bae-a219-4ccd3257cf4c\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\b3bbd07d-0e71-4bae-a219-4ccd3257cf4c\\output
+[2021-01-28 13:23:18:0270] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3a37b0d1-df74-4aef-a3e0-c594bad311f7\\input
+[2021-01-28 13:23:18:0271] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3a37b0d1-df74-4aef-a3e0-c594bad311f7\\output
+[2021-01-28 13:23:18:0272] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3a37b0d1-df74-4aef-a3e0-c594bad311f7, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3a37b0d1-df74-4aef-a3e0-c594bad311f7\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\3a37b0d1-df74-4aef-a3e0-c594bad311f7\\output
+[2021-01-28 14:31:36:0112] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\1f867a39-8861-447e-84f3-5bc7cfeab51c\\input
+[2021-01-28 14:31:42:0261] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 14:31:36:0115] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\1f867a39-8861-447e-84f3-5bc7cfeab51c\\output
+[2021-01-28 14:31:36:0117] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\1f867a39-8861-447e-84f3-5bc7cfeab51c, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\1f867a39-8861-447e-84f3-5bc7cfeab51c\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\1f867a39-8861-447e-84f3-5bc7cfeab51c\\output
+[2021-01-28 14:31:39:0426] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f6e01a36-cc0d-4f63-b93a-858800028d57\\input
+[2021-01-28 14:31:39:0426] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f6e01a36-cc0d-4f63-b93a-858800028d57\\output
+[2021-01-28 14:31:39:0427] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f6e01a36-cc0d-4f63-b93a-858800028d57, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\f6e01a36-cc0d-4f63-b93a-858800028d57\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\f6e01a36-cc0d-4f63-b93a-858800028d57\\output
+[2021-01-28 14:31:43:0152] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 14:35:51:0860] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 14:35:53:0360] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 14:35:49:0157] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d26b67d5-72c0-4f74-8cd0-54bc3cdd64a2\\input
+[2021-01-28 14:35:49:0160] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d26b67d5-72c0-4f74-8cd0-54bc3cdd64a2\\output
+[2021-01-28 14:35:49:0162] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d26b67d5-72c0-4f74-8cd0-54bc3cdd64a2, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d26b67d5-72c0-4f74-8cd0-54bc3cdd64a2\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\d26b67d5-72c0-4f74-8cd0-54bc3cdd64a2\\output
+[2021-01-28 14:35:51:0851] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\379f8bec-ba64-4d0f-bd9f-15b5c8fe7822\\input
+[2021-01-28 14:35:51:0852] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\379f8bec-ba64-4d0f-bd9f-15b5c8fe7822\\output
+[2021-01-28 14:35:51:0853] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\379f8bec-ba64-4d0f-bd9f-15b5c8fe7822, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\379f8bec-ba64-4d0f-bd9f-15b5c8fe7822\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\379f8bec-ba64-4d0f-bd9f-15b5c8fe7822\\output
+[2021-01-28 14:41:00:0829] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 14:41:02:0098] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 14:40:58:0381] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c57149b3-cf00-4e23-844c-daceba87a3f1\\input
+[2021-01-28 14:40:58:0384] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c57149b3-cf00-4e23-844c-daceba87a3f1\\output
+[2021-01-28 14:40:58:0386] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c57149b3-cf00-4e23-844c-daceba87a3f1, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c57149b3-cf00-4e23-844c-daceba87a3f1\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\c57149b3-cf00-4e23-844c-daceba87a3f1\\output
+[2021-01-28 14:41:00:0809] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b7adf236-a44d-4ff0-8b96-46151db898e5\\input
+[2021-01-28 14:41:00:0810] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b7adf236-a44d-4ff0-8b96-46151db898e5\\output
+[2021-01-28 14:41:00:0811] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b7adf236-a44d-4ff0-8b96-46151db898e5, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b7adf236-a44d-4ff0-8b96-46151db898e5\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\b7adf236-a44d-4ff0-8b96-46151db898e5\\output
+[2021-01-28 15:22:07:0349] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:22:09:0177] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:22:04:0529] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ba8eea85-64a9-4238-a942-a43028bdf780\\input
+[2021-01-28 15:22:04:0532] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ba8eea85-64a9-4238-a942-a43028bdf780\\output
+[2021-01-28 15:22:04:0534] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ba8eea85-64a9-4238-a942-a43028bdf780, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ba8eea85-64a9-4238-a942-a43028bdf780\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\ba8eea85-64a9-4238-a942-a43028bdf780\\output
+[2021-01-28 15:22:07:0256] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b16590ed-088c-436f-88cc-d39aaf32f46b\\input
+[2021-01-28 15:22:07:0257] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b16590ed-088c-436f-88cc-d39aaf32f46b\\output
+[2021-01-28 15:22:07:0258] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b16590ed-088c-436f-88cc-d39aaf32f46b, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b16590ed-088c-436f-88cc-d39aaf32f46b\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\b16590ed-088c-436f-88cc-d39aaf32f46b\\output
+[2021-01-28 15:23:05:0575] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e56227c4-68c4-4b57-829a-ea4a2e355b33\\input
+[2021-01-28 15:23:09:0497] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:23:05:0578] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e56227c4-68c4-4b57-829a-ea4a2e355b33\\output
+[2021-01-28 15:23:05:0580] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e56227c4-68c4-4b57-829a-ea4a2e355b33, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e56227c4-68c4-4b57-829a-ea4a2e355b33\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\e56227c4-68c4-4b57-829a-ea4a2e355b33\\output
+[2021-01-28 15:23:07:0408] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b20db194-14b6-4470-82a3-4a144cdda948\\input
+[2021-01-28 15:23:07:0409] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b20db194-14b6-4470-82a3-4a144cdda948\\output
+[2021-01-28 15:23:07:0410] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b20db194-14b6-4470-82a3-4a144cdda948, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\b20db194-14b6-4470-82a3-4a144cdda948\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\b20db194-14b6-4470-82a3-4a144cdda948\\output
+[2021-01-28 15:23:10:0390] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:24:06:0496] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\63ee040e-deb0-4ae9-b9b6-d8bbc11dae79\\input
+[2021-01-28 15:24:13:0067] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:24:06:0502] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\63ee040e-deb0-4ae9-b9b6-d8bbc11dae79\\output
+[2021-01-28 15:24:06:0503] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\63ee040e-deb0-4ae9-b9b6-d8bbc11dae79, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\63ee040e-deb0-4ae9-b9b6-d8bbc11dae79\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\63ee040e-deb0-4ae9-b9b6-d8bbc11dae79\\output
+[2021-01-28 15:24:10:0240] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0e921ce3-c6d7-499c-8c61-18c49a316a57\\input
+[2021-01-28 15:24:10:0241] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0e921ce3-c6d7-499c-8c61-18c49a316a57\\output
+[2021-01-28 15:24:10:0242] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0e921ce3-c6d7-499c-8c61-18c49a316a57, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0e921ce3-c6d7-499c-8c61-18c49a316a57\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\0e921ce3-c6d7-499c-8c61-18c49a316a57\\output
+[2021-01-28 15:24:13:0946] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:25:56:0219] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\165ec32c-1b60-440a-8bd6-029f16671995\\input
+[2021-01-28 15:25:59:0900] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:25:56:0221] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\165ec32c-1b60-440a-8bd6-029f16671995\\output
+[2021-01-28 15:25:56:0222] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\165ec32c-1b60-440a-8bd6-029f16671995, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\165ec32c-1b60-440a-8bd6-029f16671995\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\165ec32c-1b60-440a-8bd6-029f16671995\\output
+[2021-01-28 15:25:57:0864] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7957dc64-8f54-49aa-8fa5-c5b610fb255b\\input
+[2021-01-28 15:25:57:0864] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7957dc64-8f54-49aa-8fa5-c5b610fb255b\\output
+[2021-01-28 15:25:57:0865] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7957dc64-8f54-49aa-8fa5-c5b610fb255b, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7957dc64-8f54-49aa-8fa5-c5b610fb255b\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\7957dc64-8f54-49aa-8fa5-c5b610fb255b\\output
+[2021-01-28 15:26:00:0725] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:26:41:0002] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:26:42:0685] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:26:36:0990] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a097289c-ad6e-419f-aebd-b94ffa995aef\\input
+[2021-01-28 15:26:36:0992] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a097289c-ad6e-419f-aebd-b94ffa995aef\\output
+[2021-01-28 15:26:36:0994] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a097289c-ad6e-419f-aebd-b94ffa995aef, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a097289c-ad6e-419f-aebd-b94ffa995aef\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\a097289c-ad6e-419f-aebd-b94ffa995aef\\output
+[2021-01-28 15:26:41:0032] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9bedcffe-c4e0-453b-8682-1a4f3f830490\\input
+[2021-01-28 15:26:41:0032] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9bedcffe-c4e0-453b-8682-1a4f3f830490\\output
+[2021-01-28 15:26:41:0034] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9bedcffe-c4e0-453b-8682-1a4f3f830490, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\9bedcffe-c4e0-453b-8682-1a4f3f830490\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\9bedcffe-c4e0-453b-8682-1a4f3f830490\\output
+[2021-01-28 15:36:26:0764] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:36:27:0580] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:36:24:0657] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\25336ad8-3d11-4fcd-9ff7-590b8d7f8dda\\input
+[2021-01-28 15:36:24:0660] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\25336ad8-3d11-4fcd-9ff7-590b8d7f8dda\\output
+[2021-01-28 15:36:24:0661] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\25336ad8-3d11-4fcd-9ff7-590b8d7f8dda, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\25336ad8-3d11-4fcd-9ff7-590b8d7f8dda\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\25336ad8-3d11-4fcd-9ff7-590b8d7f8dda\\output
+[2021-01-28 15:36:27:0051] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c86a0137-e25f-4a06-a17b-7f7e8c5ba279\\input
+[2021-01-28 15:36:27:0052] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c86a0137-e25f-4a06-a17b-7f7e8c5ba279\\output
+[2021-01-28 15:36:27:0053] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c86a0137-e25f-4a06-a17b-7f7e8c5ba279, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c86a0137-e25f-4a06-a17b-7f7e8c5ba279\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\c86a0137-e25f-4a06-a17b-7f7e8c5ba279\\output
+[2021-01-28 15:41:39:0449] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:41:41:0540] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:41:35:0911] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e1e41137-ef60-4dfe-bf9c-6e530efc5f39\\input
+[2021-01-28 15:41:35:0913] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e1e41137-ef60-4dfe-bf9c-6e530efc5f39\\output
+[2021-01-28 15:41:35:0915] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e1e41137-ef60-4dfe-bf9c-6e530efc5f39, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e1e41137-ef60-4dfe-bf9c-6e530efc5f39\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\e1e41137-ef60-4dfe-bf9c-6e530efc5f39\\output
+[2021-01-28 15:41:39:0661] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\be2b1e04-b40f-4631-b2a5-e596b0793454\\input
+[2021-01-28 15:41:39:0662] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\be2b1e04-b40f-4631-b2a5-e596b0793454\\output
+[2021-01-28 15:41:39:0664] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\be2b1e04-b40f-4631-b2a5-e596b0793454, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\be2b1e04-b40f-4631-b2a5-e596b0793454\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\be2b1e04-b40f-4631-b2a5-e596b0793454\\output
+[2021-01-28 15:43:12:0200] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:43:13:0262] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 15:43:09:0661] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\774fd281-4afe-46ed-9158-92f06470f224\\input
+[2021-01-28 15:43:09:0663] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\774fd281-4afe-46ed-9158-92f06470f224\\output
+[2021-01-28 15:43:09:0664] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\774fd281-4afe-46ed-9158-92f06470f224, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\774fd281-4afe-46ed-9158-92f06470f224\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\774fd281-4afe-46ed-9158-92f06470f224\\output
+[2021-01-28 15:43:12:0232] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d87641a8-78c2-46be-8109-5d2738d972aa\\input
+[2021-01-28 15:43:12:0233] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d87641a8-78c2-46be-8109-5d2738d972aa\\output
+[2021-01-28 15:43:12:0235] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d87641a8-78c2-46be-8109-5d2738d972aa, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d87641a8-78c2-46be-8109-5d2738d972aa\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\d87641a8-78c2-46be-8109-5d2738d972aa\\output
+[2021-01-28 17:03:37:0325] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\56875c18-db29-4a3a-a536-fd76b36ddd1a\\input
+[2021-01-28 17:03:37:0328] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\56875c18-db29-4a3a-a536-fd76b36ddd1a\\output
+[2021-01-28 17:03:37:0329] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\56875c18-db29-4a3a-a536-fd76b36ddd1a, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\56875c18-db29-4a3a-a536-fd76b36ddd1a\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\56875c18-db29-4a3a-a536-fd76b36ddd1a\\output
+[2021-01-28 17:03:39:0626] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e4919c4e-30ed-4cd1-bee7-ccb12f1ef1ba\\input
+[2021-01-28 17:03:39:0626] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e4919c4e-30ed-4cd1-bee7-ccb12f1ef1ba\\output
+[2021-01-28 17:03:39:0627] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e4919c4e-30ed-4cd1-bee7-ccb12f1ef1ba, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\e4919c4e-30ed-4cd1-bee7-ccb12f1ef1ba\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\e4919c4e-30ed-4cd1-bee7-ccb12f1ef1ba\\output
+[2021-01-28 17:03:44:0736] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:03:47:0571] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:03:54:0235] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:03:55:0105] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:09:56:0038] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3e56ee0c-e4ce-44fa-8a8b-5e7ff65518c9\\input
+[2021-01-28 17:09:56:0042] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3e56ee0c-e4ce-44fa-8a8b-5e7ff65518c9\\output
+[2021-01-28 17:09:56:0045] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3e56ee0c-e4ce-44fa-8a8b-5e7ff65518c9, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3e56ee0c-e4ce-44fa-8a8b-5e7ff65518c9\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\3e56ee0c-e4ce-44fa-8a8b-5e7ff65518c9\\output
+[2021-01-28 17:09:57:0884] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\95946879-b946-403a-884e-cb3dc8f8e775\\input
+[2021-01-28 17:09:57:0885] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\95946879-b946-403a-884e-cb3dc8f8e775\\output
+[2021-01-28 17:09:57:0887] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\95946879-b946-403a-884e-cb3dc8f8e775, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\95946879-b946-403a-884e-cb3dc8f8e775\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\95946879-b946-403a-884e-cb3dc8f8e775\\output
+[2021-01-28 17:10:01:0438] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:10:02:0517] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:10:09:0079] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:10:12:0744] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:10:30:0801] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:14:28:0766] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:14:40:0325] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c9d42cd2-de6c-4e72-9b17-23de12366281\\input
+[2021-01-28 17:14:40:0330] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c9d42cd2-de6c-4e72-9b17-23de12366281\\output
+[2021-01-28 17:14:40:0332] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c9d42cd2-de6c-4e72-9b17-23de12366281, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\c9d42cd2-de6c-4e72-9b17-23de12366281\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\c9d42cd2-de6c-4e72-9b17-23de12366281\\output
+[2021-01-28 17:14:43:0368] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3ed33564-aad8-4cec-86c5-1d00d1e0c956\\input
+[2021-01-28 17:14:43:0369] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3ed33564-aad8-4cec-86c5-1d00d1e0c956\\output
+[2021-01-28 17:14:43:0371] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3ed33564-aad8-4cec-86c5-1d00d1e0c956, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\3ed33564-aad8-4cec-86c5-1d00d1e0c956\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\3ed33564-aad8-4cec-86c5-1d00d1e0c956\\output
+[2021-01-28 17:15:04:0981] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:15:16:0611] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:15:26:0674] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:15:34:0957] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:15:37:0646] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:15:41:0167] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:15:11:0652] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6f1eb6b8-e825-4085-8d10-504d82fa3dc0\\input
+[2021-01-28 17:15:11:0658] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6f1eb6b8-e825-4085-8d10-504d82fa3dc0\\output
+[2021-01-28 17:15:11:0685] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6f1eb6b8-e825-4085-8d10-504d82fa3dc0, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\6f1eb6b8-e825-4085-8d10-504d82fa3dc0\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\6f1eb6b8-e825-4085-8d10-504d82fa3dc0\\output
+[2021-01-28 17:15:16:0772] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\84bac978-84e5-4020-be78-8ece24269fec\\input
+[2021-01-28 17:15:16:0774] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\84bac978-84e5-4020-be78-8ece24269fec\\output
+[2021-01-28 17:15:16:0779] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\84bac978-84e5-4020-be78-8ece24269fec, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\84bac978-84e5-4020-be78-8ece24269fec\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\84bac978-84e5-4020-be78-8ece24269fec\\output
+[2021-01-28 17:15:26:0831] [error]  - File-Name - - --&gt; license check File failed rebuild
+[2021-01-28 17:15:58:0698] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:15:57:0994] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:15:58:0526] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:16:00:0723] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:16:43:0655] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:16:55:0588] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:17:19:0907] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:16:42:0200] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7a13d71a-34a7-4f92-b18c-3ba96ef36780\\input
+[2021-01-28 17:17:21:0256] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:17:24:0463] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:17:56:0181] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:17:54:0571] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\23c86dcb-082b-4428-b2a8-c8d5b9954db6\\input
+[2021-01-28 17:18:05:0768] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:18:09:0512] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:18:10:0790] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:18:11:0566] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:17:54:0575] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\23c86dcb-082b-4428-b2a8-c8d5b9954db6\\output
+[2021-01-28 17:17:54:0578] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\23c86dcb-082b-4428-b2a8-c8d5b9954db6, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\23c86dcb-082b-4428-b2a8-c8d5b9954db6\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\23c86dcb-082b-4428-b2a8-c8d5b9954db6\\output
+[2021-01-28 17:17:58:0323] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0103bd73-d9ae-496d-9009-e35c1c4143d2\\input
+[2021-01-28 17:17:58:0325] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0103bd73-d9ae-496d-9009-e35c1c4143d2\\output
+[2021-01-28 17:17:58:0327] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0103bd73-d9ae-496d-9009-e35c1c4143d2, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0103bd73-d9ae-496d-9009-e35c1c4143d2\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\0103bd73-d9ae-496d-9009-e35c1c4143d2\\output
+[2021-01-28 17:23:32:0259] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\69144e65-b355-4f34-b88a-4793a142a197\\input
+[2021-01-28 17:23:32:0261] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\69144e65-b355-4f34-b88a-4793a142a197\\output
+[2021-01-28 17:23:32:0262] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\69144e65-b355-4f34-b88a-4793a142a197, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\69144e65-b355-4f34-b88a-4793a142a197\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\69144e65-b355-4f34-b88a-4793a142a197\\output
+[2021-01-28 17:23:34:0613] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d6461dac-1855-4b6c-bb1e-dd65fa5bacf4\\input
+[2021-01-28 17:23:34:0614] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d6461dac-1855-4b6c-bb1e-dd65fa5bacf4\\output
+[2021-01-28 17:23:34:0615] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d6461dac-1855-4b6c-bb1e-dd65fa5bacf4, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\d6461dac-1855-4b6c-bb1e-dd65fa5bacf4\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\d6461dac-1855-4b6c-bb1e-dd65fa5bacf4\\output
+[2021-01-28 17:23:38:0114] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:23:40:0729] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:23:38:0973] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:23:41:0512] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:30:38:0669] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a7bbd6fe-7545-4ded-813c-5c876a62b219\\input
+[2021-01-28 17:30:44:0826] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:30:38:0671] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a7bbd6fe-7545-4ded-813c-5c876a62b219\\output
+[2021-01-28 17:30:38:0672] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a7bbd6fe-7545-4ded-813c-5c876a62b219, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\a7bbd6fe-7545-4ded-813c-5c876a62b219\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\a7bbd6fe-7545-4ded-813c-5c876a62b219\\output
+[2021-01-28 17:30:40:0882] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5f781101-1a3e-4fa6-aaa3-9841efbedb19\\input
+[2021-01-28 17:30:40:0882] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5f781101-1a3e-4fa6-aaa3-9841efbedb19\\output
+[2021-01-28 17:30:40:0883] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5f781101-1a3e-4fa6-aaa3-9841efbedb19, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\5f781101-1a3e-4fa6-aaa3-9841efbedb19\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\5f781101-1a3e-4fa6-aaa3-9841efbedb19\\output
+[2021-01-28 17:30:45:0642] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:30:49:0228] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:30:53:0007] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:32:41:0584] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:32:41:0982] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:32:41:0263] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7c4e135a-4e30-4787-8647-1dcc6fedd9d5\\input
+[2021-01-28 17:32:41:0265] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7c4e135a-4e30-4787-8647-1dcc6fedd9d5\\output
+[2021-01-28 17:32:41:0267] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7c4e135a-4e30-4787-8647-1dcc6fedd9d5, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\7c4e135a-4e30-4787-8647-1dcc6fedd9d5\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\7c4e135a-4e30-4787-8647-1dcc6fedd9d5\\output
+[2021-01-28 17:32:42:0747] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\be08d12d-48cb-4148-a824-875e5dc73ae0\\input
+[2021-01-28 17:32:42:0748] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\be08d12d-48cb-4148-a824-875e5dc73ae0\\output
+[2021-01-28 17:32:42:0749] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\be08d12d-48cb-4148-a824-875e5dc73ae0, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\be08d12d-48cb-4148-a824-875e5dc73ae0\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\be08d12d-48cb-4148-a824-875e5dc73ae0\\output
+[2021-01-28 17:32:45:0806] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:32:46:0600] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:32:47:0930] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:33:59:0629] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:34:01:0611] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:34:02:0779] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0e60be31-2c35-40af-9e0c-6ae9dfb00b08\\input
+[2021-01-28 17:34:02:0467] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:34:02:0780] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0e60be31-2c35-40af-9e0c-6ae9dfb00b08\\output
+[2021-01-28 17:34:02:0781] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0e60be31-2c35-40af-9e0c-6ae9dfb00b08, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\0e60be31-2c35-40af-9e0c-6ae9dfb00b08\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\0e60be31-2c35-40af-9e0c-6ae9dfb00b08\\output
+[2021-01-28 17:34:04:0016] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\953e9646-6977-4938-8d5d-4708d74a0066\\input
+[2021-01-28 17:34:04:0016] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\953e9646-6977-4938-8d5d-4708d74a0066\\output
+[2021-01-28 17:34:04:0021] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\953e9646-6977-4938-8d5d-4708d74a0066, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\953e9646-6977-4938-8d5d-4708d74a0066\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\953e9646-6977-4938-8d5d-4708d74a0066\\output
+[2021-01-28 17:34:08:0305] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:34:11:0244] [error]  - File-Name - - --&gt; heatlh status:2
+[2021-01-28 17:34:56:0830] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\62c46d5d-ead4-4be1-9443-d51110c7614d\\input
+[2021-01-28 17:35:04:0250] [info]  - File-Name - - --&gt; health loaderfalse
+[2021-01-28 17:34:56:0832] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check outputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\62c46d5d-ead4-4be1-9443-d51110c7614d\\output
+[2021-01-28 17:34:56:0833] [info]  - File-Name - - --&gt; &lt;health_chk&gt; License check created  dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\62c46d5d-ead4-4be1-9443-d51110c7614d, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\62c46d5d-ead4-4be1-9443-d51110c7614d\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\62c46d5d-ead4-4be1-9443-d51110c7614d\\output
+[2021-01-28 17:35:00:0578] [info]  - File-Name - - --&gt; check_license  =  inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ca1175b2-1b6e-4b1b-b336-6bbe27f8dc6e\\input
+[2021-01-28 17:35:00:0579] [info]  - File-Name - - --&gt; check_license  =  C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ca1175b2-1b6e-4b1b-b336-6bbe27f8dc6e\\output
+[2021-01-28 17:35:00:0580] [info]  - File-Name - - --&gt; check_license  Created rebuild dirs in C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ca1175b2-1b6e-4b1b-b336-6bbe27f8dc6e, inputDir C:\\Users\\Asus\\AppData\\Roaming\\glasswall-des
+ktop\\temp\\ca1175b2-1b6e-4b1b-b336-6bbe27f8dc6e\\input, outputDirC:\\Users\\Asus\\AppData\\Roaming\\glass
+wall-desktop\\temp\\ca1175b2-1b6e-4b1b-b336-6bbe27f8dc6e\\output
+[2021-01-28 17:35:05:0629] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:35:06:0466] [debug]  - File-Name - Get CLI version --&gt; Vers
+[2021-01-28 17:35:15:0347] [error]  - File-Name - - --&gt; heatlh status:2
+
+        </Highlight>
+      </div>
+    </div>
+  </main>
+</div>
+`;

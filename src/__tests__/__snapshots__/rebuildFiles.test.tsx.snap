@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test Header component 1`] = `
+<div>
+  <div
+    className="makeStyles-root-1"
+  >
+    <SideDrawer
+      showBack={false}
+    />
+    <main
+      className="makeStyles-content-16"
+    >
+      <div
+        className="makeStyles-toolbar-15"
+      />
+      <div
+        className="makeStyles-contentArea-17"
+      >
+        <h3>
+          Cloud Rebuild Files
+        </h3>
+        <Dropzone
+          disabled={false}
+          getFilesFromEvent={[Function]}
+          maxFiles={0}
+          maxSize={Infinity}
+          minSize={0}
+          multiple={true}
+          noClick={false}
+          noDrag={false}
+          noDragEventsBubbling={false}
+          noKeyboard={false}
+          onDrop={[Function]}
+          preventDropOnDocument={true}
+        >
+          <Component />
+        </Dropzone>
+        <div
+          className="makeStyles-errMsg-13"
+        >
+           Failed to upload 
+        </div>
+        <div
+          className="makeStyles-successMsg-14"
+        >
+          File uploaded successuly 
+        </div>
+        <div
+          className="makeStyles-tableContainer-44"
+        >
+          <div>
+            <div
+              className="makeStyles-tableField-26"
+            >
+              <div
+                className="makeStyles-settings-28"
+              >
+                <div
+                  className="makeStyles-btnHeading-29"
+                >
+                  <div
+                    className="makeStyles-headingGroup-30"
+                  >
+                    <h4>
+                      Select Directory Path
+                      <span>
+                        *
+                      </span>
+                    </h4>
+                    <div
+                      className="makeStyles-toggleContainer-37"
+                    >
+                      <WithStyles(ForwardRef(FormControlLabel))
+                        className="makeStyles-toggleToolTip-41"
+                        control={
+                          <WithStyles(ForwardRef(Switch))
+                            checked={false}
+                            color="primary"
+                            onChange={[Function]}
+                          />
+                        }
+                        label="Hierarchy"
+                        value="Hierarchy"
+                      />
+                      <div
+                        className="makeStyles-toggleToolTipTitle-42"
+                      >
+                        The hierarchical filesystems option to save processed files in a tree structure of directories, flat filesystem option to saves in a single directory that contains all files with no subdirectories
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    className="makeStyles-saveFileBtn-32"
+                  >
+                    <input
+                      defaultValue=""
+                      placeholder="Directory Path"
+                      readOnly={true}
+                      type="text"
+                    />
+                    <button
+                      onClick={[Function]}
+                    >
+                      <Memo([object Object])
+                        className="makeStyles-btnIcon-24"
+                      />
+                      Select Target Directory
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <Footer />
+    </main>
+  </div>
+</div>
+`;

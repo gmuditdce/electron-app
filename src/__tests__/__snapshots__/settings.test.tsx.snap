@@ -1,0 +1,131 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test Header component 1`] = `
+<Fragment>
+  <div
+    className="makeStyles-root-1"
+  >
+    <SideDrawer
+      showBack={false}
+    />
+    <main
+      className="makeStyles-content-3"
+    >
+      <div
+        className="makeStyles-toolbar-2"
+      />
+      <div
+        className="makeStyles-contentArea-4"
+      >
+        <h3>
+          Settings
+        </h3>
+        <div
+          className="makeStyles-textContainer-5"
+        >
+          <h4>
+            REBUILD ENGINE URL
+          </h4>
+          <div
+            className="makeStyles-urlBox-6"
+          >
+            <label
+              className="readOnlys"
+            >
+              https://
+            </label>
+            <input
+              className="pl-left-48"
+              onChange={[Function]}
+              type="text"
+              value="https://8oiyjy8w63.execute-api.us-west-2.amazonaws.com/Prod/api/rebuild/base64"
+            />
+          </div>
+          <h4>
+            REBUILD ANALYSIS URL
+          </h4>
+          <div
+            className="makeStyles-urlBox-6"
+          >
+            <label
+              className="readOnlys"
+            >
+              https://
+            </label>
+            <input
+              className="pl-left-48"
+              onChange={[Function]}
+              type="text"
+              value="https://o7ymnow6vf.execute-api.us-west-2.amazonaws.com/Prod/api/Analyse/base64"
+            />
+          </div>
+          <h4>
+            API Key
+          </h4>
+          <div
+            className="makeStyles-apiKeyBox-7"
+          >
+            <input
+              onChange={[Function]}
+              type="password"
+              value="dp2Ug1jtEh4xxFHpJBfWn9V7fKB3yVcv60lhwOAG"
+            />
+            <button
+              onClick={[Function]}
+            >
+               
+              <Memo([object Object]) />
+            </button>
+          </div>
+          <h4>
+            REBUILD DOCKER IMAGE
+          </h4>
+          <div
+            className="makeStyles-urlBox-6"
+          >
+            <input
+              onChange={[Function]}
+              type="text"
+              value="dp2Ug1jtEh4xxFHpJBfWn9V7fKB3yVcv60lhwOAG"
+            />
+          </div>
+          <h4>
+            REBUILD DOCKER IMAGE TAG
+          </h4>
+          <div
+            className="makeStyles-urlBox-6"
+          >
+            <input
+              onChange={[Function]}
+              type="text"
+              value="rebuild"
+            />
+          </div>
+          <h4>
+            REBUILD Glasswall CLI Version
+          </h4>
+          <div
+            className="makeStyles-urlBox-6"
+          >
+            <input
+              type="text"
+              value="1.144"
+            />
+          </div>
+          <div
+            className="makeStyles-btnBox-9"
+          >
+            <a
+              className="makeStyles-submitBtn-8"
+              href="https://glasswall-store.com/"
+            >
+              Buy Token 
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <Footer />
+</Fragment>
+`;

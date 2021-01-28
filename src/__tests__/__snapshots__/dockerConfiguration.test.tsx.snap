@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test Header component 1`] = `
+<Fragment>
+  <div
+    className="makeStyles-root-1"
+  >
+    <SideDrawer
+      showBack={false}
+    />
+    <main
+      className="makeStyles-content-3"
+    >
+      <div
+        className="makeStyles-toolbar-2"
+      />
+      <div
+        className="makeStyles-contentArea-4"
+      >
+        <h3>
+          Health Check Status
+        </h3>
+        <p>
+          Perform a health check of pre-requisites before using docker-rebuild 
+        </p>
+        <div
+          className="makeStyles-textContainer-5"
+        >
+          <button
+            className="makeStyles-logButton-12"
+            onClick={[Function]}
+          >
+            Logs
+          </button>
+          <button
+            className="makeStyles-healthCheckBtn-8"
+            onClick={[Function]}
+          >
+            Check Health
+          </button>
+          <WithStyles(ForwardRef(TableContainer))>
+            <WithStyles(ForwardRef(Table))
+              aria-label="a dense table"
+              className="makeStyles-table-7"
+              size="small"
+            >
+              <WithStyles(ForwardRef(TableHead))>
+                <WithStyles(ForwardRef(TableRow))>
+                  <WithStyles(ForwardRef(TableCell))>
+                    Required
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                    Status
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                    Action
+                  </WithStyles(ForwardRef(TableCell))>
+                </WithStyles(ForwardRef(TableRow))>
+              </WithStyles(ForwardRef(TableHead))>
+              <WithStyles(ForwardRef(TableBody))>
+                <WithStyles(ForwardRef(TableRow))
+                  key="DOCKER INSTALLED"
+                >
+                  <WithStyles(ForwardRef(TableCell))>
+                                     
+                    DOCKER INSTALLED
+                              
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                       
+                    <Memo([object Object])
+                      className="makeStyles-check-10"
+                    />
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                        
+                            
+                  </WithStyles(ForwardRef(TableCell))>
+                </WithStyles(ForwardRef(TableRow))>
+                <WithStyles(ForwardRef(TableRow))
+                  key="DOCKER  STARTED"
+                >
+                  <WithStyles(ForwardRef(TableCell))>
+                                     
+                    DOCKER  STARTED
+                              
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                       
+                    <Memo([object Object])
+                      className="makeStyles-check-10"
+                    />
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                        
+                            
+                  </WithStyles(ForwardRef(TableCell))>
+                </WithStyles(ForwardRef(TableRow))>
+                <WithStyles(ForwardRef(TableRow))
+                  key="GW IMAGE PRESENT"
+                >
+                  <WithStyles(ForwardRef(TableCell))>
+                                     
+                    GW IMAGE PRESENT
+                              
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                       
+                    <Memo([object Object])
+                      className="makeStyles-check-10"
+                    />
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                        
+                            
+                  </WithStyles(ForwardRef(TableCell))>
+                </WithStyles(ForwardRef(TableRow))>
+                <WithStyles(ForwardRef(TableRow))
+                  key="LICENSE VALID"
+                >
+                  <WithStyles(ForwardRef(TableCell))>
+                                     
+                    LICENSE VALID
+                              
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                       
+                    <Memo([object Object])
+                      className="makeStyles-check-10"
+                    />
+                  </WithStyles(ForwardRef(TableCell))>
+                  <WithStyles(ForwardRef(TableCell))
+                    align="left"
+                  >
+                        
+                            
+                  </WithStyles(ForwardRef(TableCell))>
+                </WithStyles(ForwardRef(TableRow))>
+              </WithStyles(ForwardRef(TableBody))>
+            </WithStyles(ForwardRef(Table))>
+          </WithStyles(ForwardRef(TableContainer))>
+        </div>
+      </div>
+    </main>
+  </div>
+  <Footer />
+</Fragment>
+`;

@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test Header component 1`] = `
+<div>
+  <WithStyles(ForwardRef(Container))
+    className="makeStyles-fullWidth-2"
+  >
+    <WithStyles(ForwardRef(Grid))
+      container={true}
+      spacing={2}
+    >
+      <WithStyles(ForwardRef(Grid))
+        className="makeStyles-gridItemLeft-5"
+        item={true}
+        xs={9}
+      >
+        <h2
+          className="makeStyles-welcomeTxt-6"
+        >
+          Welcome to Glasswall Desktop
+        </h2>
+        <div
+          className="makeStyles-logo-8"
+        >
+          <img
+            className="makeStyles-logoImg-9"
+            src={null}
+          />
+          <h2
+            className="makeStyles-heading-7"
+          >
+            Glasswall Desktop
+          </h2>
+          <h6
+            className="makeStyles-version-10"
+          >
+            0.1.0
+          </h6>
+          <p
+            className="makeStyles-abtContent-11"
+          >
+            Glasswall Desktop is a desktop application that provides multi file drag and drop rebuild workflow.
+          </p>
+        </div>
+        <div
+          className="makeStyles-btnGroup-12"
+          onClick={[Function]}
+        >
+          <Link
+            className="makeStyles-getStartBtn-13"
+            to="/rebuildFiles"
+          >
+            Get Started
+          </Link>
+        </div>
+        <footer>
+          <p
+            className="makeStyles-termsCondition-14"
+          >
+            Agree to the 
+            <a
+              className="makeStyles-colorGreen-15"
+              href="https://github.com/k8-proxy/glasswall-desktop/blob/master/LICENSE"
+            >
+              Terms and Conditions.
+            </a>
+          </p>
+        </footer>
+      </WithStyles(ForwardRef(Grid))>
+      <WithStyles(ForwardRef(Grid))
+        className="makeStyles-gridItemRight-4"
+        item={true}
+        xs={3}
+      >
+        <ReleaseNote />
+      </WithStyles(ForwardRef(Grid))>
+    </WithStyles(ForwardRef(Grid))>
+  </WithStyles(ForwardRef(Container))>
+  <Footer />
+</div>
+`;
