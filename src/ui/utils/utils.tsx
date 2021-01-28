@@ -1,5 +1,3 @@
-import { isNumericLiteral } from "typescript";
-
 var child_process                         = require("child_process");
 const path                                = require('path');
 var fs                                    = require('fs');
@@ -664,10 +662,9 @@ export const sanitize_file_name = (file_name: string)=> {
   return file_name.replace(REGEX_SAFE_FILE_NAME, '_')
 }
 
-
 export const getLogsPath = ()=>{
   let logDir = getAppDataPath() + getPathSep() + _LOGS_FOLDER;
-  if(!fs.existsSync(logDir)){
+  if(!fs.existsSync(logDir)){ 
     fs.mkdirSync(logDir);
   }  
   var logFile = logDir + +getPathSep()+_LOGS_FILE
@@ -741,4 +738,32 @@ export const isBlockedByPolicy = (filePath:string) =>{
 
 export const isBlockedByPolicyMsg = (message:string) =>{
   return message.indexOf(POLICY_BLOCKED_TXT) > -1;
+}
+
+export const create_config = () =>{
+  let configDir = resolve(getAppDataPath() + getPathSep() + 'config');
+    if (!fs.existsSync(configDir)){
+        fs.mkdirSync(configDir);
+    }
+    if (!fs.existsSync(configDir+"/config.ini")){
+        fs.openSync(path.join(configDir,"config.ini"),'w');
+        fs.writeFileSync(path.join(configDir,"config.ini"),CONFIG_INI);        
+    }    
+    if (!fs.existsSync(configDir+"/config.xml")){
+        fs.openSync(path.join(configDir,"config.xml"),'w');
+        fs.writeFileSync(path.join(configDir,"config.xml"),CONFIG_XML);    
+    }
+    //Rebuild
+    let configDirR = resolve(getAppDataPath() + getPathSep() + 'configR');
+    if (!fs.existsSync(configDirR)){
+        fs.mkdirSync(configDirR);
+    }
+    if (!fs.existsSync(configDirR+"/config.ini")){
+        fs.openSync(path.join(configDirR,"config.ini"),'w');
+        fs.writeFileSync(path.join(configDirR,"config.ini"),CONFIG_INI_REBUILD);        
+    }    
+    if (!fs.existsSync(configDirR+"/config.xml")){
+        fs.openSync(path.join(configDirR,"config.xml"),'w');
+        fs.writeFileSync(path.join(configDirR,"config.xml"),CONFIG_XML_REBUILD);    
+    }
 }
