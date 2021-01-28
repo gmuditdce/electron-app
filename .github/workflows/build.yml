@@ -36,7 +36,7 @@ jobs:
           mkdir ~/.glasswall-desktop/
           mkdir ~/.glasswall-desktop/processed
           rm -rf src/__tests__/__snapshots__/*
-          npm run test_ut
+          npm run test_ut -- -u
           sleep 10
           npm run coveralls
 
