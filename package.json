@@ -5,7 +5,7 @@
   "main": "./out/electron/index.js",
   "scripts": {
     "test": "jest --detectOpenHandles --color",
-	"coveralls": "jest --coverage && coveralls",
+	"coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
     "test-ut-watch ": "jest --watch --detectOpenHandles --color ",    
     "test:coverage": "npm run test-ut -- --coverage",
     "build": "webpack --config webpack.ui.config.js --config webpack.electron.config.js",

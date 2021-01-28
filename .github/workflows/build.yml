@@ -35,12 +35,7 @@ jobs:
           docker pull "glasswallsolutions/evaluationsdk:rebuild"
           mkdir ~/.glasswall-desktop/
           mkdir ~/.glasswall-desktop/processed
-          npm run test
-
-      - name: npm install, make test-coverage
-        run: |
-          npm install
-          make test-coverage
+          npm run coveralls
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
