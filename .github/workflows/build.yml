@@ -38,6 +38,7 @@ jobs:
           npm run coveralls
 
       - name: Coveralls
+        if: startsWith(matrix.os, 'Ubuntu')
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
