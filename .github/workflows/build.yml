@@ -35,6 +35,7 @@ jobs:
           docker pull "glasswallsolutions/evaluationsdk:rebuild"
           mkdir ~/.glasswall-desktop/
           mkdir ~/.glasswall-desktop/processed
+          rm -rf src/__tests__/__snapshots__/*
           npm run test_ut
           sleep 10
           npm run coveralls
